@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9be20b95.css",
+    "main.js": "/static/js/main.55e483ea.js",
+    "static/js/787.815e5cff.chunk.js": "/static/js/787.815e5cff.chunk.js",
+    "static/media/BlackRock-Logo.wine.svg": "/static/media/BlackRock-Logo.wine.e154d92e56e98fec0c01a033863ec1fe.svg",
+    "index.html": "/index.html",
+    "main.9be20b95.css.map": "/static/css/main.9be20b95.css.map",
+    "main.55e483ea.js.map": "/static/js/main.55e483ea.js.map",
+    "787.815e5cff.chunk.js.map": "/static/js/787.815e5cff.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9be20b95.css",
+    "static/js/main.55e483ea.js"
+  ]
+}

@@ -1,0 +1,40 @@
+/* MainContent.css */
+.main-content {
+    flex: 1; /* Takes up the remaining space */
+    background-color: #fff; /* Example background color */
+    padding: 30px 60px 20px 60px;
+}
+
+.about-me-header {
+    font-size: 90px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;  
+    margin: 0px;
+}
+
+.desc-paragraph {
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;  
+    padding: 20px;
+    margin: 0px;
+}
+
+.my-divider {
+    height: 1px;          /* Sets the height of the line */
+    background-color: #333; /* Sets the color of the line */
+    margin: 30px 0;      /* Adds some space above and below the line */
+}
+
+.services-header {
+    font-size: 60px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;  
+    margin: 0px;
+}

@@ -1,0 +1,35 @@
+
+.Profile-Photo {
+    padding: 20px;
+}
+
+.Name-Title {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0px 12px;
+    font-family: "Roboto", sans-serif;
+}
+
+.Position-Title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 6px;
+    font-family: "Roboto", sans-serif;
+}
+
+.Email-Button {
+    margin-top: 30px;
+}
+
+.About-Me-Header {
+    font-size: 54px;
+    font-weight: 300;
+    margin: 0px 0px 20px 0px;
+    font-family: "Roboto", sans-serif;
+}
+
+.About-Me-Paragraph {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    text-align: center;
+}

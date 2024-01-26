@@ -1,0 +1,16 @@
+.serviceTitle {
+    color: var(--primary-color);
+    font-size: 28px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    margin: 18px 0px;
+}
+
+.serviceSubTitle {
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    margin: 12px 3px;
+}
