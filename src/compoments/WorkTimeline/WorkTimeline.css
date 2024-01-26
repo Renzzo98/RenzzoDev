@@ -1,0 +1,36 @@
+.experience-timeline {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 40px 60px;
+    gap: 30px ;
+}
+
+.experience-header { 
+    font-size: 60px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;  
+    margin: 0px;
+}
+
+.custom-card {
+    background-color: white;
+}
+
+.custom-title {
+    color: black;
+    font-size: 36px;
+}
+
+.custom-card-title {
+    color: black;
+    font-size: 36px;
+}
+
+.custom-card-detailed-text {
+    color: black;
+    font-size: 36px;
+}
