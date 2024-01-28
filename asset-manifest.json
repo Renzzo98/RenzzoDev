@@ -1,18 +1,15 @@
 {
   "files": {
-    "main.css": "/RenzzoDev/static/css/main.0396ae3c.css",
-    "main.js": "/RenzzoDev/static/js/main.e6f5651e.js",
-    "static/js/787.815e5cff.chunk.js": "/RenzzoDev/static/js/787.815e5cff.chunk.js",
-    "static/media/coder_school.png": "/RenzzoDev/static/media/coder_school.fada4bfd3f365f79ab98.png",
-    "static/media/hofstra_logo.svg": "/RenzzoDev/static/media/hofstra_logo.4aa6b10806ee0f19113b347a94d24850.svg",
-    "static/media/BlackRock-Logo.wine.svg": "/RenzzoDev/static/media/BlackRock-Logo.wine.e154d92e56e98fec0c01a033863ec1fe.svg",
+    "main.css": "/RenzzoDev/static/css/main.b765e4b1.css",
+    "main.js": "/RenzzoDev/static/js/main.8fd8e1c3.js",
+    "static/js/787.9cc4916a.chunk.js": "/RenzzoDev/static/js/787.9cc4916a.chunk.js",
     "index.html": "/RenzzoDev/index.html",
-    "main.0396ae3c.css.map": "/RenzzoDev/static/css/main.0396ae3c.css.map",
-    "main.e6f5651e.js.map": "/RenzzoDev/static/js/main.e6f5651e.js.map",
-    "787.815e5cff.chunk.js.map": "/RenzzoDev/static/js/787.815e5cff.chunk.js.map"
+    "main.b765e4b1.css.map": "/RenzzoDev/static/css/main.b765e4b1.css.map",
+    "main.8fd8e1c3.js.map": "/RenzzoDev/static/js/main.8fd8e1c3.js.map",
+    "787.9cc4916a.chunk.js.map": "/RenzzoDev/static/js/787.9cc4916a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0396ae3c.css",
-    "static/js/main.e6f5651e.js"
+    "static/css/main.b765e4b1.css",
+    "static/js/main.8fd8e1c3.js"
   ]
 }
