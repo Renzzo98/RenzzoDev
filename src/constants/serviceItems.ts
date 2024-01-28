@@ -11,7 +11,7 @@ export interface serviceItem {
 
 export const development = {
     key: 1,
-    title: 'Development',
+    title: 'Develop',
     subTitle: 'Delivering cutting-edge frontend development and coding services to bring your creative visions to life.',
     iconPath: CODINGICON
 }

@@ -2,11 +2,12 @@
 .main-content {
     flex: 1; /* Takes up the remaining space */
     background-color: #fff; /* Example background color */
-    padding: 30px 60px 20px 60px;
+    padding: 30px 30px 20px 30px;
 }
 
 .about-me-header {
-    font-size: 90px;
+    padding-top: 30px;
+    font-size: 60px;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: bold;
