@@ -22,7 +22,9 @@ const ServiceCardList: FC<ServiceCardListProps> = ({ serviceList }) => {
         >
             {serviceList.map((item, index) => {
                 return (
-                    <ServiceCard id={index} title={item.title} subTitle={item.subTitle} iconPath={item.iconPath} />
+                    <div key={index}>
+                        <ServiceCard id={index} title={item.title} subTitle={item.subTitle} iconPath={item.iconPath} />
+                    </div>
                 );
             })}
         </Pane>

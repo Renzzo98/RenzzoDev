@@ -26,14 +26,11 @@ const IconList: FC<IconListProps> = ({ vertical = false, iconArr, scrollSectionL
         >
             {iconArr.map((item, index) => {
                 return (
-                    <div>
+                    <div key={index}>
                         {scrollSectionList ? 
-                        <div key={index}>
                             <IconButton id={item.key} link={item.link} iconPath={item.iconPath} activeIcon={item.activeIconPath} scrollFunction={scrollSectionList[index]} />
-                        </div> :
-                        <div key={index}>
+                         :
                             <IconButton id={item.key} link={item.link} iconPath={item.iconPath} activeIcon={item.activeIconPath} />
-                        </div>
                         }
                     </div>
                 );

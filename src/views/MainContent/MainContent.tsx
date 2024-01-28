@@ -1,11 +1,17 @@
 import './MainContent.css'; // Import corresponding CSS
 
+import { FC } from 'react';
 import { Pane } from 'evergreen-ui';
 import Insights from '../../compoments/Insights/Insights';
 import ServiceCardList from '../../compoments/ServiceCardList/ServiceCardList';
 import { development, design } from '../../constants/serviceItems'; 
+import { aboutMeDesc, aboutMeHeader, servicesHeader } from '../../constants/textContent';
 
-const MainContent = () => {
+interface mainContentProps {
+  isMobile: boolean
+}
+
+const MainContent: FC<mainContentProps> = ({ isMobile }) => {
 
   const serviceArr = [ development, design ];
 
@@ -15,13 +21,13 @@ const MainContent = () => {
       clearfix display="flex"
       flexDirection="column"
     >
-      <p className='about-me-header'>about me</p>
-      <Insights />
+      <p className='about-me-header'>{aboutMeHeader}</p>
+      <Insights isMobile={isMobile} />
       <p className='desc-paragraph'>
-        I am Hugo Renzzo Olcese, a dedicated and skilled software engineer with a master's degree in the field. My advanced education has provided me with a deep understanding of software engineering principles and a robust skill set. This combination of theoretical knowledge and practical experience enables me to effectively tackle complex technical challenges. My expertise extends beyond coding and development; I am also well-versed in software architecture and project management. As a professional in the dynamic world of technology, I am committed to continuous learning and applying innovative solutions to advance the field.
+        {aboutMeDesc}
       </p>
       <hr className='my-divider' /> 
-      <p className='services-header'>services</p>
+      <p className='services-header'>{servicesHeader}</p>
       <Pane
         clearfix display="flex"
         flexDirection="row"

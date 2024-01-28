@@ -4,7 +4,16 @@
 
 .insight-stat {
     color: var(--primary-color);
-    font-size: 16px;
+    font-size: clamp(10px, 1.1vw, 18px);
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: italic;  
+}
+
+.insight-stat-mobile {
+    color: var(--primary-color);
+    font-size: 10px;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;

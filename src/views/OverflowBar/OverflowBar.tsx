@@ -7,6 +7,7 @@ import { useGlobalState } from '../../GlobalStateProvider';
 import IconList from '../../compoments/IconList/IconList';
 import LeftArrowIcon from '../../assets/left_arrow_icon.png';
 import { gitHubWhite, linkedInWhite } from '../../constants/iconItems';
+import { downloadCV, fullName } from '../../constants/textContent';
 
 interface OverflowBarProps {
   isMobile: boolean;
@@ -48,9 +49,9 @@ const OverflowBar: FC<OverflowBarProps> = ({ isMobile }) => {
           marginBottom="100px"
           alignItems="center"
         >
-          <p className='name-header'>HUGO</p>
-          <p className='name-header'>RENZZO</p>
-          <p className='name-header'>OLCESE</p>
+          <p className='name-header'>{fullName[0]}</p>
+          <p className='name-header'>{fullName[1]}</p>
+          <p className='name-header'>{fullName[2]}</p>
           <hr className='name-divider' /> 
           <IconList vertical={false} iconArr={socialMediaIcons} />
         </Pane>
@@ -75,13 +76,13 @@ const OverflowBar: FC<OverflowBarProps> = ({ isMobile }) => {
           justifyContent="center"
           alignItems="center"
         >
-          <p className='name-header'>HUGO</p>
-          <p className='name-header'>RENZZO</p>
-          <p className='name-header'>OLCESE</p>
+          <p className='name-header'>{fullName[0]}</p>
+          <p className='name-header'>{fullName[1]}</p>
+          <p className='name-header'>{fullName[2]}</p>
           <hr className='name-divider-mobile' /> 
           <IconList vertical={false} iconArr={socialMediaIcons} />
           <Button marginY={8} paddingX={30} height={56} iconAfter={DownloadIcon}>
-            Download CV
+            {downloadCV}
           </Button>
         </Pane>
         {/* Add your sidebar content here */}
