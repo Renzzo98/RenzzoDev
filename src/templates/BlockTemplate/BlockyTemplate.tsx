@@ -1,7 +1,6 @@
 import './BlockyTemplate.css';
 
 import { FC, useRef } from 'react';
-import { useMediaQuery } from 'react-responsive';
 import OverflowBar from '../../views/OverflowBar/OverflowBar';
 import { Pane } from 'evergreen-ui';
 import WorkTimeline from '../../compoments/WorkTimeline/WorkTimeline';

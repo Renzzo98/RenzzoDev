@@ -1,3 +1,82 @@
-.sideBarNav {
-    
+.topBarNav {
+    padding: 20px;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    background-color: black;
+}
+
+
+.navbar {
+    width: 10%;
+    color: white;
+    padding: 10px;
+}
+
+.menu-button {
+    padding: 12px;
+    cursor: pointer;
+}
+
+.menu-button {
+    height: 1rem;
+    position: relative;
+    /* Other styling */
+}
+  
+.menu-icon {
+    font-size: 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-out;
+}
+
+
+/* Show class to smoothly transition in */
+.show {
+    opacity: 1;
+}
+  
+/* Hide class to smoothly transition out */
+.hide {
+    opacity: 0 !important; /* Add !important to ensure override */
+}
+
+.top-nav-menu-container {
+    background-color: black;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(-100%); /* Start off-screen */
+    opacity: 0; /* Start as invisible */
+    visibility: hidden; /* instead of display: none; */
+    transition: visibility 0s linear 0.5s, opacity 0.5s ease, transform 0.5s ease; /* Add visibility to transition */
+}
+
+.top-nav-menu-container.show {
+    transform: translateY(0); /* Bring into view */
+    opacity: 1; /* Make fully visible */
+    visibility: visible; /* instead of display: block; */
+    transition: visibility 0s linear 0s, opacity 0.5s ease, transform 0.5s ease; /* Add visibility to transition */
+}
+
+.top-nav-menu-container.hide {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.menu-list {
+    color: white;
+    height: 100%;
+    list-style: none;
+    padding: 0;
+}
+
+.menu-list li {
+    padding: 10px;
+    border-bottom: 1px solid #fff;
 }
