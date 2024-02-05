@@ -6,15 +6,18 @@ import { Chrono } from "react-chrono";
 
 import { expHeader, workExperienceItems } from '../../constants/textContent';
 
-interface ModernWorkTimelineProps {}
+interface ModernWorkTimelineProps {
+    refPointer: React.RefObject<HTMLDivElement>;
+}
 
-const ModernWorkTimeline: FC<ModernWorkTimelineProps> = () => {
+const ModernWorkTimeline: FC<ModernWorkTimelineProps> = ({ refPointer }) => {
 
     
 
     return (
         <Pane
             className='experience-timeline'
+            ref={refPointer}
         >
             <p className='experience-header'>{expHeader.toUpperCase()}</p>
             <hr className='name-divider' /> 

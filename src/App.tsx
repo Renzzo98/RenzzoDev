@@ -14,7 +14,7 @@ function App() {
   const SwitchTemplate = () => {
     switch (currTemplate) {
       case 1: return (
-        <ModernTemplate isMobile={MobileView} />
+        <ModernTemplate />
       );
       default: return (
         <BlockyTemplate isMobile={MobileView} />
