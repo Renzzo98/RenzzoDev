@@ -17,9 +17,10 @@ const ModernTemplate: FC<modernTemplateProps> = () => {
 
 
     const scrollToHeaderSection = () => {
-        if (sectionHeader.current) {
-        sectionHeader.current.scrollIntoView({ behavior: 'smooth' });
-        }
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
     };
 
     const scrollToAboutSection = () => {

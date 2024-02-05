@@ -56,7 +56,7 @@ const TopBarNavigation: FC<topBarNavigationProps> = ({ scrollFuncList })  => {
         toggleMenu();
         setTimeout(() => {
             const currentScrollPosition = window.scrollY;
-            const offsetPosition = currentScrollPosition - 235;
+            const offsetPosition = currentScrollPosition - 250;
             
             window.scrollTo({
               top: offsetPosition,
