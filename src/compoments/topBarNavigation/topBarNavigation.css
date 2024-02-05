@@ -101,3 +101,36 @@
     font-weight: 200;
     font-style: normal; 
 }
+
+.resume-bar {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 6px;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.resume-bar.scrolled {
+    color: white;
+}
+
+.resume-text {
+    font-size: 1.3rem;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal; 
+}
+
+.resume-download-icon {
+    width: 40px;
+    transition: transform 0.5s ease;
+    transform: scale(1); /* Default state */
+}
+
+.resume-download-icon:hover {
+    transform: scale(1.7); /* Zoom in on hover */
+}
