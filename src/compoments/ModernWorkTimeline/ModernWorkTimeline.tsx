@@ -16,10 +16,10 @@ const ModernWorkTimeline: FC<ModernWorkTimelineProps> = ({ refPointer }) => {
 
     return (
         <Pane
-            className='experience-timeline'
+            className='modern-experience-timeline'
             ref={refPointer}
         >
-            <p className='experience-header'>{expHeader.toUpperCase()}</p>
+            <p className='modern-experience-header'>{expHeader.toUpperCase()}</p>
             <hr className='name-divider' /> 
             <div className='timeline-item'>
                 <Chrono 
