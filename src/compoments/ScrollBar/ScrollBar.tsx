@@ -27,7 +27,6 @@ const ScrollBar: FC<ScrollBarProps> = ({ title, percentage }) => {
             start: 'top center', // Trigger when the top of the bar reaches the center of the viewport
             end: 'bottom top',
             toggleActions: 'play none none none',
-            markers: true, // For debugging purposes
           },
         });
       }
