@@ -4,7 +4,7 @@ import { FC, useEffect, useState } from 'react';
 import { Pane } from 'evergreen-ui';
 import { navItems } from '../../constants/textContent';
 import DownloadIcon from '../../assets/downarrowcircle_down_arrow_direction_move_icon.png';
-import whiteDownloadIcon from '../../assets/white_downarrowcircle_down_arrow_direction_move_icon.png';
+import orangeDownloadIcon from '../../assets/orange_downarrowcircle_down_arrow_direction_move_icon.png';
 
 interface topBarNavigationProps {
     scrollFuncList: (() => void)[];
@@ -90,7 +90,7 @@ const TopBarNavigation: FC<topBarNavigationProps> = ({ scrollFuncList })  => {
                             )
                         })}
                         <a className={`resume-bar ${scrolled ? 'scrolled' : ''}`} href={`${process.env.PUBLIC_URL}/${fileName}`} download="HugoRenzzoResume.pdf">
-                            <img className='resume-download-icon' src={scrolled? whiteDownloadIcon : DownloadIcon} alt="Download resume" />
+                            <img className='resume-download-icon' src={scrolled? orangeDownloadIcon : DownloadIcon} alt="Download resume" />
                             <p className='resume-text'>DOWNLOAD RESUME</p>
                         </a>
 

@@ -1,0 +1,61 @@
+.counter-container {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+}
+
+.counter-box {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5vw;
+    background-color: white;
+}
+
+.primary-box {
+    background-color: black;
+}
+
+.counter-value {
+    font-size: 4rem;
+    font-family: "Montserrat", sans-serif;
+    color: black;
+}
+
+.counter-divider {
+    width: 20%;
+    height: 1px;          /* Sets the height of the line */
+    background-color: black; /* Sets the color of the line */
+    border-color: black;
+    margin: 6px 0;      /* Adds some space above and below the line */
+}
+
+.primary {
+    border-color: var(--modern-primary-color);
+    background-color: var(--modern-primary-color);
+}
+
+.sub-title {
+    font-size: 1.6vw;    
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    color: black;
+    text-align: center;
+}
+
+.primary-text {
+    color: white;
+}
+
+/* Media query for mobile devices */
+
+@media (max-width: 600px) {
+    .counter-box {
+        flex-basis: 100%; /* On small screens, take the full width */
+    }
+    .sub-title {
+        font-size: 4vw;    
+    }
+}

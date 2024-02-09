@@ -5,7 +5,8 @@ import { Pane } from 'evergreen-ui';
 import TopBarNavigation from '../../compoments/TopBarNavigation/TopBarNavigation';
 import TitleCard from '../../views/TitleCard/TitleCard';
 import AboutMeSection from '../../views/AboutMeSection/AboutMeSection';
-import ModernWorkTimeline from '../../compoments/ModernWorkTimeline/ModernWorkTimeline';
+import ExperienceSection from '../../views/ExperienceSection/ExperienceSection';
+import InsightsSection from '../../views/InsightsSection/InsightsSection';
 
 interface modernTemplateProps {}
 
@@ -43,7 +44,8 @@ const ModernTemplate: FC<modernTemplateProps> = () => {
                 <TopBarNavigation scrollFuncList={scrollFunctions} />
                 <TitleCard refPointer={sectionHeader}/>
                 <AboutMeSection refPointer={sectionAbout}/>
-                <ModernWorkTimeline  refPointer={sectionExp}/>
+                <ExperienceSection refPointer={sectionExp} />
+                <InsightsSection refPointer={sectionExp}/>
             </Pane>
         </div>
     );

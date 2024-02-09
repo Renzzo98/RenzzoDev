@@ -1,0 +1,15 @@
+.skill-set-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 80%;
+    padding: 30px;
+}
+
+.skill-header {
+    font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-style: normal; 
+    text-align: center;
+}

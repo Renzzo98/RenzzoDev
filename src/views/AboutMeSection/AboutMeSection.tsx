@@ -1,8 +1,9 @@
 import './AboutMeSection.css';
 
 import { FC } from 'react';
-import { Pane } from 'evergreen-ui';
 import { aboutMeDesc, aboutMeHeader } from '../../constants/textContent';
+import Section from '../../compoments/Section/Section';
+import SkillSet from '../../compoments/SkillSet/SkillSet';
 
 interface AboutMeSectionProps {
     refPointer: React.RefObject<HTMLDivElement>;
@@ -11,14 +12,14 @@ interface AboutMeSectionProps {
 const AboutMeSection: FC<AboutMeSectionProps> = ({ refPointer }) => {
     
     return (
-        <Pane 
-            className='aboutMe-containter'
-            ref={refPointer}
-        >
-            <p className='aboutMe-header'>{aboutMeHeader.toUpperCase()}</p>
-            <hr className='name-divider' /> 
-            <p className='aboutMe-desc'>{aboutMeDesc}</p>
-        </Pane>
+        <div>
+            <Section
+                header={aboutMeHeader}
+                desc={aboutMeDesc}
+                refPointer={refPointer}
+                childComponent={<SkillSet/>}
+            />
+        </div>
     ) 
 }
 
