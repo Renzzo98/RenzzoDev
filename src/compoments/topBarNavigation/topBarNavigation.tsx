@@ -1,4 +1,4 @@
-import './TopBarNavigation.css';
+import './topBarNavigation.css';
 
 import { FC, useEffect, useState } from 'react';
 import { Pane } from 'evergreen-ui';

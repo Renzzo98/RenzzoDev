@@ -2,12 +2,12 @@ import './ModernTemplate.css';
 
 import { FC, useRef } from 'react';
 import { Pane } from 'evergreen-ui';
-import TopBarNavigation from '../../compoments/TopBarNavigation/TopBarNavigation';
 import TitleCard from '../../views/TitleCard/TitleCard';
 import AboutMeSection from '../../views/AboutMeSection/AboutMeSection';
 import ExperienceSection from '../../views/ExperienceSection/ExperienceSection';
 import InsightsSection from '../../views/InsightsSection/InsightsSection';
 import ContactSection from '../../views/ContactSection/ContactSection';
+import TopBarNavigation from '../../compoments/TopBarNavigation/topBarNavigation';
 
 interface modernTemplateProps {}
 
