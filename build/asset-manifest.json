@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/RenzzoDev/static/css/main.6c36cd6f.css",
-    "main.js": "/RenzzoDev/static/js/main.e9cb39b0.js",
+    "main.css": "/RenzzoDev/static/css/main.bf544b04.css",
+    "main.js": "/RenzzoDev/static/js/main.6a5713e0.js",
     "static/js/787.9cc4916a.chunk.js": "/RenzzoDev/static/js/787.9cc4916a.chunk.js",
     "index.html": "/RenzzoDev/index.html",
-    "main.6c36cd6f.css.map": "/RenzzoDev/static/css/main.6c36cd6f.css.map",
-    "main.e9cb39b0.js.map": "/RenzzoDev/static/js/main.e9cb39b0.js.map",
+    "main.bf544b04.css.map": "/RenzzoDev/static/css/main.bf544b04.css.map",
+    "main.6a5713e0.js.map": "/RenzzoDev/static/js/main.6a5713e0.js.map",
     "787.9cc4916a.chunk.js.map": "/RenzzoDev/static/js/787.9cc4916a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6c36cd6f.css",
-    "static/js/main.e9cb39b0.js"
+    "static/css/main.bf544b04.css",
+    "static/js/main.6a5713e0.js"
   ]
 }

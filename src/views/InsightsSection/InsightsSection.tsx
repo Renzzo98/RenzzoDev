@@ -13,7 +13,7 @@ const InsightsSection: FC<InsightsSectionProps> = ({ refPointer }) => {
     return (
         <Section 
             header=''
-            desc=''
+            divider={false}
             refPointer={refPointer}
             childComponent={<InsightsBar />}
         />

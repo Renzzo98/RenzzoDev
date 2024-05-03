@@ -3,7 +3,7 @@ export const aboutMeHeader = "About Me";
 export const aboutMeDesc = "I am Hugo Renzzo Olcese, a dedicated and skilled software engineer with a master's degree in the field. My advanced education has provided me with a deep understanding of software engineering principles and a robust skill set. This combination of theoretical knowledge and practical experience enables me to effectively tackle complex technical challenges. My expertise extends beyond coding and development; I am also well-versed in software architecture and project management. As a professional in the dynamic world of technology, I am committed to continuous learning and applying innovative solutions to advance the field."
 export const servicesHeader = "Services";
 export const expHeader = "Experience";
-
+export const conactHeader = "Contact Me"
 
 export const fullName = [
     "HUGO",
@@ -24,7 +24,8 @@ export const personalInsight = [
 export const navItems = [
     "Home",
     "About Me",
-    "Experience"
+    "Experience",
+    "Contact Me"
 ]
 
 export const workExperienceItems = [
@@ -59,3 +60,5 @@ export const workExperienceItems = [
         cardDetailedText: "Building next generation of intrusion detection system by monitoring every single machine instruction on CPU! Worked with 3 other programmers on Intel PT decoder and CUDA based GPU programming. Led a group of 5 student researchers. Accomplished over 4000 times speed-up compared with default Intel decoder. Successfully captured buffer overflow attacks. Experiences with automated GDB scripting.",
     },
 ];
+
+export const contactDesc = 'Always looking for new opportunities!'

@@ -5,12 +5,15 @@ import { Pane } from 'evergreen-ui';
 interface SectionProps {
     header: string;
     desc?: string;
+    divider?: boolean;
     topSpacing?: number;
+    botSpacing?: number;
+    altBackground?: boolean;
     childComponent?: React.ReactNode; // Type for the component prop
     refPointer: React.RefObject<HTMLDivElement>;
 }
 
-const Section: FC<SectionProps> = ({ header, desc, topSpacing, childComponent, refPointer }) => {
+const Section: FC<SectionProps> = ({ header, desc, divider = true, topSpacing, botSpacing, altBackground, childComponent, refPointer }) => {
     
     return (
         <Pane
@@ -18,13 +21,15 @@ const Section: FC<SectionProps> = ({ header, desc, topSpacing, childComponent, r
             display="flex"
             flexDirection='column'
             alignItems="center"
-            paddingTop={topSpacing? topSpacing : 40}
+            backgroundColor={altBackground ? 'black' : ''}
+            paddingTop={topSpacing ? topSpacing : 40}
+            paddingBottom={botSpacing ? botSpacing : 0 }
             ref={refPointer}
         >
-            <p className='section-header'>{header.toUpperCase()}</p>
-            {header == '' ? <div /> : <hr className='section-divider' /> }
+            <p className={`section-header ${altBackground ? 'dark' : ''}`}>{header.toUpperCase()}</p>
+            {divider ? <hr className={`section-divider ${altBackground ? 'dark' : ''}`} /> : <div /> }
             {desc ? 
-                <p className='section-desc'>{desc}</p> : 
+                <p className={`section-desc ${altBackground ? 'dark' : ''}`}>{desc}</p> : 
                 ''
             }
             {childComponent}
