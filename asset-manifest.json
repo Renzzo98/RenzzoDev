@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/RenzzoDev/static/css/main.6c36cd6f.css",
-    "main.js": "/RenzzoDev/static/js/main.67e92acf.js",
-    "static/js/787.9cc4916a.chunk.js": "/RenzzoDev/static/js/787.9cc4916a.chunk.js",
-    "index.html": "/RenzzoDev/index.html",
-    "main.6c36cd6f.css.map": "/RenzzoDev/static/css/main.6c36cd6f.css.map",
-    "main.67e92acf.js.map": "/RenzzoDev/static/js/main.67e92acf.js.map",
-    "787.9cc4916a.chunk.js.map": "/RenzzoDev/static/js/787.9cc4916a.chunk.js.map"
+    "main.css": "/static/css/main.b765e4b1.css",
+    "main.js": "/static/js/main.a2d35d89.js",
+    "static/js/787.9cc4916a.chunk.js": "/static/js/787.9cc4916a.chunk.js",
+    "index.html": "/index.html",
+    "main.b765e4b1.css.map": "/static/css/main.b765e4b1.css.map",
+    "main.a2d35d89.js.map": "/static/js/main.a2d35d89.js.map",
+    "787.9cc4916a.chunk.js.map": "/static/js/787.9cc4916a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6c36cd6f.css",
-    "static/js/main.67e92acf.js"
+    "static/css/main.b765e4b1.css",
+    "static/js/main.a2d35d89.js"
   ]
 }
