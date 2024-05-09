@@ -1,20 +1,18 @@
 import './InsightsSection.css';
 
-import { FC } from 'react';
+import { FC, useRef } from 'react';
 import Section from '../../compoments/Section/Section';
 import InsightsBar from '../../compoments/InsightsBar/InsightsBar';
 
-interface InsightsSectionProps {
-    refPointer: React.RefObject<HTMLDivElement>;
-}
+interface InsightsSectionProps {}
 
-const InsightsSection: FC<InsightsSectionProps> = ({ refPointer }) => {
+const InsightsSection: FC<InsightsSectionProps> = () => {
     
     return (
         <Section 
             header=''
             divider={false}
-            refPointer={refPointer}
+            refPointer={useRef<HTMLDivElement>(null)}
             childComponent={<InsightsBar />}
         />
     ) 

@@ -22,8 +22,8 @@ const TopBarNavigation: FC<topBarNavigationProps> = ({ scrollFuncList })  => {
         const handleScroll = () => {
         const isScrolled = window.scrollY > 0;
         if (isScrolled !== scrolled) {
-            setScrolled(isScrolled);
-        }
+                setScrolled(isScrolled);
+            }
         };
 
         // Add the scroll event listener
@@ -85,7 +85,7 @@ const TopBarNavigation: FC<topBarNavigationProps> = ({ scrollFuncList })  => {
                         {navItems.map((item, index) => {
                             return (
                                 <div key={index}>
-                                    <li onClick={() => handleScrollFunction(scrollFuncList[index])}>{item}</li>
+                                    <li className='menu-item' onClick={() => handleScrollFunction(scrollFuncList[index])}>{item}</li>
                                 </div>
                             )
                         })}

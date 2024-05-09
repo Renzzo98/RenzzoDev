@@ -28,13 +28,13 @@ const ModernTemplate: FC<modernTemplateProps> = () => {
 
     const scrollToAboutSection = () => {
         if (sectionAbout.current) {
-        sectionAbout.current.scrollIntoView({ behavior: 'smooth' });
+            sectionAbout.current.scrollIntoView({ behavior: 'smooth' });
         }
     };
 
     const scrollToExpSection = () => {
         if (sectionExp.current) {
-        sectionExp.current.scrollIntoView({ behavior: 'smooth' });
+            sectionExp.current.scrollIntoView({ behavior: 'smooth' });
         }
     };
 
@@ -54,7 +54,7 @@ const ModernTemplate: FC<modernTemplateProps> = () => {
                 <TitleCard refPointer={sectionHeader}/>
                 <AboutMeSection refPointer={sectionAbout}/>
                 <ExperienceSection refPointer={sectionExp} />
-                <InsightsSection refPointer={sectionExp}/>
+                <InsightsSection />
                 <ContactSection refPointer={sectionContact}/>
             </Pane>
         </div>
