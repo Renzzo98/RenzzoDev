@@ -21,7 +21,7 @@ const IconList: FC<IconListProps> = ({ vertical = false, iconArr, scrollSectionL
             flexDirection={vertical ? 'column' : 'row'}
             justifyContent="space-evenly"
             alignItems="center"
-            gap="30px"
+            gap="40px"
             marginY={40}
         >
             {iconArr.map((item, index) => {

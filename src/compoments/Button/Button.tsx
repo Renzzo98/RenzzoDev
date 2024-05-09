@@ -1,6 +1,5 @@
 import './Button.css';
 import { FC } from 'react';
-import { useGlobalState } from '../../GlobalStateProvider';
 import { StyleTypes } from '../../constants';
 
 interface IconButtonButtonProps {

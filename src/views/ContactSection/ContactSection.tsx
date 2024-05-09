@@ -2,9 +2,10 @@ import './ContactSection.css';
 
 import { FC } from 'react';
 import Section from '../../compoments/Section/Section';
-import { gitHubWhite, linkedInWhite } from '../../constants/iconItems';
 import IconList from '../../compoments/IconList/IconList';
+import { gitHubWhite, linkedInWhite } from '../../constants/iconItems';
 import { conactHeader, contactDesc } from '../../constants';
+import { motion } from "framer-motion"
 
 interface ContactSectionProps {
     refPointer: React.RefObject<HTMLDivElement>;
@@ -27,7 +28,12 @@ const ContactSection: FC<ContactSectionProps> = ({ refPointer }) => {
                 divider={false}
                 childComponent={<IconList vertical={false} iconArr={socialMediaIcons} />}
             />
+            <motion.div
+                initial={{ x: "100%" }}
+                animate={{ x: "calc(100vw - 50%)" }}
+            />
         </div>
+        
     ) 
 }
 

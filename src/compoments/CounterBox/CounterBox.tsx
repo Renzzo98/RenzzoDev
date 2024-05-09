@@ -47,12 +47,12 @@ const CounterBox: FC<CounterBoxProps> = ({ maxInt, subTitle, type }) => {
 
     return (
         <div className='counter-container'>
-            <div className={`counter-box ${type == StyleTypes.Primary ? 'primary-box' : ''}`}>
-                <div ref={numberRef} className={`counter-value ${type == StyleTypes.Primary ? 'primary-text' : ''}`} data-target={maxInt}>
+            <div className={`counter-box ${type === StyleTypes.Primary ? 'primary-box' : ''}`}>
+                <div ref={numberRef} className={`counter-value ${type === StyleTypes.Primary ? 'primary-text' : ''}`} data-target={maxInt}>
                     0
                 </div>
-                <hr className={`counter-divider ${type == StyleTypes.Primary ? 'primary' : ''}`} /> 
-                <p className={`sub-title ${type == StyleTypes.Primary ? 'primary-text' : ''}`}>{subTitle}</p>
+                <hr className={`counter-divider ${type === StyleTypes.Primary ? 'primary' : ''}`} /> 
+                <p className={`sub-title ${type === StyleTypes.Primary ? 'primary-text' : ''}`}>{subTitle}</p>
             </div>
         </div>
     );

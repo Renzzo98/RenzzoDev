@@ -11,6 +11,7 @@
     "@types/react-dom": "^18.2.18",
     "@types/scrollmagic": "^2.0.8",
     "evergreen-ui": "^7.1.9",
+    "framer-motion": "^11.1.9",
     "gh-pages": "^6.1.1",
     "gsap": "^3.12.5",
     "react": "^18.2.0",
