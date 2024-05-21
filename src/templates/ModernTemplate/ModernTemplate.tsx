@@ -51,9 +51,11 @@ const ModernTemplate: FC<modernTemplateProps> = () => {
         <div>
             <Pane className='modernTemplate'>
                 <TopBarNavigation scrollFuncList={scrollFunctions} />
-                <TitleCard refPointer={sectionHeader}/>
-                <AboutMeSection refPointer={sectionAbout}/>
-                <ExperienceSection refPointer={sectionExp} />
+                <div className='body-content'>
+                    <TitleCard refPointer={sectionHeader}/>
+                    <AboutMeSection refPointer={sectionAbout}/>
+                    <ExperienceSection refPointer={sectionExp} />
+                </div>
                 <InsightsSection />
                 <ContactSection refPointer={sectionContact}/>
             </Pane>

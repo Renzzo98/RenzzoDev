@@ -19,7 +19,7 @@ const SkillSet: FC<SkillSetProps> = () => {
             <ScrollBar title='Java' percentage={70} />
             <ScrollBar title='Python' percentage={80} />
             <ScrollBar title='Flutter' percentage={75} />
-            <ScrollBar title='Creativity' percentage={100} />
+            <ScrollBar title='Creativity' percentage={300} />
             <Button contentText={'Download cv'} type={StyleTypes.Secondary} />
         </div>
     ) 
