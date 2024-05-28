@@ -1,0 +1,11 @@
+.modernTemplate {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 1025px) {
+    
+    .body-content {
+        padding: 0px 20rem;
+    }
+}

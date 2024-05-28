@@ -1,0 +1,16 @@
+.box {
+    width: 200px;
+    height: 200px;
+    background: var(--modern-primary-color);
+}
+
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: var(--modern-primary-color);
+    transform-origin: 0%;
+    z-index: 10;
+}

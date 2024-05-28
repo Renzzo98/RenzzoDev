@@ -26,21 +26,21 @@
 }
 
 .name-header {
-    color: white;
-    text-align: left;
-    margin: 3px;
-    font-size: 80px;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;  
+  color: white;
+  text-align: left;
+  margin: 3px;
+  font-size: 80px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;  
 }
 
 .name-divider {
-    width: 80%;
-    height: 2px;          /* Sets the height of the line */
-    background-color: white; /* Sets the color of the line */
-    margin: 60px 0;      /* Adds some space above and below the line */
+  width: 80%;
+  height: 2px;          /* Sets the height of the line */
+  background-color: white; /* Sets the color of the line */
+  margin: 60px 0;      /* Adds some space above and below the line */
 }
 
 .name-divider-mobile {
