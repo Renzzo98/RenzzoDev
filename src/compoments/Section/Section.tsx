@@ -1,5 +1,7 @@
 import './Section.css';
+
 import { FC } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { Pane } from 'evergreen-ui';
 
 interface SectionProps {
@@ -15,6 +17,9 @@ interface SectionProps {
 
 const Section: FC<SectionProps> = ({ header, desc, divider = true, topSpacing, botSpacing, altBackground, childComponent, refPointer }) => {
     
+    const MobileView = useMediaQuery({ maxWidth: 1253 });
+
+
     return (
         <Pane
             className='section-container'
@@ -29,7 +34,10 @@ const Section: FC<SectionProps> = ({ header, desc, divider = true, topSpacing, b
             <p className={`section-header ${altBackground ? 'dark' : ''}`}>{header.toUpperCase()}</p>
             {divider ? <hr className={`section-divider ${altBackground ? 'dark' : ''}`} /> : <div /> }
             {desc ? 
-                <p className={`section-desc ${altBackground ? 'dark' : ''}`}>{desc}</p> : 
+                <p 
+                    className={`section-desc ${altBackground ? 'dark' : ''}`}
+                    style={{ padding: MobileView? '1.4rem' : '', fontSize: MobileView? '' : '1.4rem'}}
+                >{desc}</p> : 
                 ''
             }
             {childComponent}

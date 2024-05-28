@@ -16,13 +16,12 @@
 }
 
 .section-desc {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
     text-align: center;
-    padding: 2rem 3rem;
 }
 
 .section-desc.dark {
