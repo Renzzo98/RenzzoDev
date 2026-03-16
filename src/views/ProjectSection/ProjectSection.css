@@ -3,13 +3,20 @@
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
     width: 100%;
-    max-width: 1200px;
+    max-width: 100%;
     margin-top: 40px;
 }
 
 .projects-grid > .featured {
     grid-column: 1 / -1;
     margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+    }
 }
 
 @media (max-width: 768px) {

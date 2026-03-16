@@ -123,7 +123,7 @@ export const workExperienceItems = [
     {
         title: 'Aug 2018  -  Apr 2019',
         cardTitle: "The Coder School",
-        cardSubTitle: "Coder Coach",
+        cardSubtitle: "Coder Coach",
         timelineContent: (
             <div>
                 <div className="card-logo-container">

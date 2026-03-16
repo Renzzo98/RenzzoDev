@@ -9,7 +9,13 @@
     margin-top: 85px;
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .body-content {
+        padding: 0px 2rem;
+    }
+}
+
+@media (min-width: 1281px) {
     .body-content {
         padding: 0px 20rem;
     }
