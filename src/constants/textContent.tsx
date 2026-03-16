@@ -187,6 +187,29 @@ export const projectsItems = [
     },
     {
         id: 2,
+        title: "Wii News Channel",
+        subtitle: "Modern Recreation of Nintendo Wii News Channel",
+        description: "A modern recreation of the Nintendo Wii News Channel using Angular. This project faithfully reproduces the unique interface and experience of the original Wii News Channel, featuring real-time news updates, responsive design, and nostalgic Wii aesthetics.",
+        technologies: ["Angular 19", "TypeScript", "NewsAPI", "RxJS"],
+        features: [
+            "Authentic Wii News Channel UI/UX with CRT TV-style scanline effects",
+            "Real-time news updates via NewsAPI with dynamic category-based browsing",
+            "Responsive design that maintains the Wii aesthetic across devices",
+            "Original Wii sound effects and music with smooth fade transitions",
+            "Interactive world map animation and article detail views",
+            "Time indicators and last-updated timestamps",
+            "Cross-page state management and mock data support for development"
+        ],
+        status: "Ongoing",
+        liveDemo: "https://renzzo98.github.io/WiiNewsChannel/",
+        github: "https://github.com/Renzzo98/WiiNewsChannel",
+        links: [
+            { label: "Live Demo", url: "https://renzzo98.github.io/WiiNewsChannel/" },
+            { label: "GitHub", url: "https://github.com/Renzzo98/WiiNewsChannel" }
+        ]
+    },
+    {
+        id: 3,
         title: "MiCiudadano",
         subtitle: "U.S. Citizenship Test Prep Web App",
         description: "An interactive, state-aware web application helping users prepare for the U.S. Citizenship Test. Features dynamic state-specific content, comprehensive practice modes, and detailed performance analytics.",
@@ -208,7 +231,7 @@ export const projectsItems = [
         ]
     },
     {
-        id: 3,
+        id: 4,
         title: "ByeBot",
         subtitle: "Safari Web Extension for Cleaner Search",
         description: "A lightweight Safari Web Extension that removes AI-generated \"Overviews\" and experimental generative content from Google Search, giving you a cleaner, distraction-free search experience.",
@@ -223,17 +246,6 @@ export const projectsItems = [
         github: "https://github.com/Renzzo98/ByeBot",
         links: [
             { label: "GitHub", url: "https://github.com/Renzzo98/ByeBot" }
-        ]
-    },
-    {
-        id: 4,
-        title: "TrueUniqueLyrics",
-        subtitle: "Lyrics Deduplication Utility",
-        description: "A Python utility that allows you to look up any song and retrieve its lyrics with all duplicates removed, delivering clean, unique lyrics for any track.",
-        technologies: ["Python"],
-        github: "https://github.com/Renzzo98/TrueUniqueLyrics",
-        links: [
-            { label: "GitHub", url: "https://github.com/Renzzo98/TrueUniqueLyrics" }
         ]
     }
 ];
