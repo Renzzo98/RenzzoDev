@@ -41,3 +41,24 @@
     color: black;
     font-size: 36px;
 }
+
+/* Override react-chrono card overflow and remove scrollbars */
+.TimelineContentDetailsWrapper-sc-d7qjm1-9 {
+    max-height: none !important;
+    overflow: visible !important;
+    height: auto !important;
+}
+
+.TimelineContentDetailsWrapper-sc-d7qjm1-9::-webkit-scrollbar {
+    display: none !important;
+}
+
+.rc-card-text {
+    max-height: none !important;
+    overflow: visible !important;
+}
+
+/* Remove grey gradient overlay */
+.lmudig::after {
+    display: none !important;
+}

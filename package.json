@@ -20,6 +20,7 @@
     "react-responsive": "^9.0.2",
     "react-scripts": "5.0.1",
     "scrollmagic": "^2.0.8",
+    "typescript": "^5.9.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

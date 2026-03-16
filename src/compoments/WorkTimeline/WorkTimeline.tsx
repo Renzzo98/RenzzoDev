@@ -20,8 +20,8 @@ const workTimeline: FC<workTimelineProps> = ({ isMobile }) => {
         >
             <p className='experience-header'>{expHeader}</p>
             <div className='timeline-item'>
-                <Chrono 
-                    items={workExperienceItems} 
+                <Chrono
+                    items={workExperienceItems}
                     theme={{
                         primary: 'black',
                         secondary: '#a947ff',
@@ -41,8 +41,8 @@ const workTimeline: FC<workTimelineProps> = ({ isMobile }) => {
                         cardTitle: 'custom-card-title',
                         title: 'custom-title',
                     }}
-                    mode="VERTICAL_ALTERNATING" 
-                
+                    mode="VERTICAL_ALTERNATING"
+                    disableToolbar
                 />
             
             </div>

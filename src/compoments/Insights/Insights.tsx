@@ -11,7 +11,7 @@ interface InsightsProps {
 const Insights: FC<InsightsProps> = ({ isMobile }) => {
 
   return (
-    <Pane 
+    <Pane
       className="insights"
       clearfix display="flex"
       flexDirection="row"
@@ -21,8 +21,6 @@ const Insights: FC<InsightsProps> = ({ isMobile }) => {
       <p className={'insight-stat'}>{personalInsight[0]}</p>
       <p>/</p>
       <p className='insight-stat'>{personalInsight[1]}</p>
-      <p>/</p>
-      <p className='insight-stat'>{personalInsight[2]}</p>
     </Pane>
   );
 };

@@ -7,7 +7,7 @@ import AboutMeSection from '../../views/AboutMeSection/AboutMeSection';
 import ExperienceSection from '../../views/ExperienceSection/ExperienceSection';
 import InsightsSection from '../../views/InsightsSection/InsightsSection';
 import ContactSection from '../../views/ContactSection/ContactSection';
-import TopBarNavigation from '../../compoments/TopBarNavigation/topBarNavigation';
+import TopBarNavigation from '../../compoments/topBarNavigation/topBarNavigation';
 
 interface modernTemplateProps {}
 

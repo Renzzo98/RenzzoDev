@@ -13,8 +13,8 @@ const ModernWorkTimeline: FC<ModernWorkTimelineProps> = () => {
 
     return (
         <div className='timeline-item'>
-            <Chrono 
-                items={workExperienceItems} 
+            <Chrono
+                items={workExperienceItems}
                 theme={{
                     primary: 'black',
                     secondary: 'orange',
@@ -28,7 +28,8 @@ const ModernWorkTimeline: FC<ModernWorkTimelineProps> = () => {
                     cardTitle: '1.2rem',
                     title: '1rem',
                 }}
-                mode="VERTICAL_ALTERNATING" 
+                mode="VERTICAL_ALTERNATING"
+                disableToolbar
             />
         </div>
     ) 
