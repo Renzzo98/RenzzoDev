@@ -5,7 +5,8 @@
 }
 
 .body-content {
-    padding: 70px 16px 0 16px;
+    padding: 0 16px;
+    margin-top: 70px;
 }
 
 @media (min-width: 1025px) {
