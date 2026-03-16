@@ -33,7 +33,7 @@ const ModernWorkTimeline: FC<ModernWorkTimelineProps> = () => {
                 fontSizes={{
                     cardText: '3rem',
                     cardTitle: '1.5rem',
-                    title: '1rem',
+                    title: '0.85rem',
                 }}
                 mode="VERTICAL_ALTERNATING"
                 disableToolbar

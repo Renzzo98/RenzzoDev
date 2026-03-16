@@ -26,16 +26,16 @@ const TopBarNavigation: FC<topBarNavigationProps> = ({ scrollFuncList })  => {
                 setScrolled(isScrolled);
             }
 
-            // Update current section based on scroll position (simple threshold-based)
-            const scrollPos = window.scrollY + 100; // Add offset for navbar
+            // Update current section based on scroll position
+            const scrollPos = window.scrollY;
 
-            if (scrollPos < 200) {
+            if (scrollPos < 547) {
                 setCurrentSection(0);
-            } else if (scrollPos < 800) {
+            } else if (scrollPos < 2758) {
                 setCurrentSection(1);
-            } else if (scrollPos < 1400) {
+            } else if (scrollPos < 7932) {
                 setCurrentSection(2);
-            } else if (scrollPos < 2200) {
+            } else if (scrollPos < 11700) {
                 setCurrentSection(3);
             } else {
                 setCurrentSection(4);
@@ -100,7 +100,7 @@ const TopBarNavigation: FC<topBarNavigationProps> = ({ scrollFuncList })  => {
                     <span className={`menu-icon ${isMenuOpen ? 'hide' : 'show'}`}>☰</span>
                     <span className={`menu-icon ${isMenuOpen ? 'show' : 'hide'}`}>✕</span>
                 </div>
-                <div className={`breadcrumb ${currentSection > 0 ? 'visible' : 'hidden'}`}>
+                <div className={`breadcrumb ${currentSection > 0 && currentSection < 4 ? 'visible' : 'hidden'}`}>
                     <span
                         className="breadcrumb-home"
                         onClick={scrollToHome}
