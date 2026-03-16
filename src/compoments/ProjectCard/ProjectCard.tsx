@@ -2,6 +2,7 @@ import './ProjectCard.css';
 
 import { FC } from 'react';
 import { motion } from 'framer-motion';
+import { useIsMobile } from '../../hooks/useIsMobile';
 
 interface ProjectLink {
     label: string;
@@ -25,12 +26,14 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
+    const isMobile = useIsMobile();
+
     return (
         <motion.div
             className={`project-card ${project.featured ? 'featured' : ''}`}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: isMobile ? 0.3 : 0.6 }}
             viewport={{ once: true }}
         >
             <div className="project-header">

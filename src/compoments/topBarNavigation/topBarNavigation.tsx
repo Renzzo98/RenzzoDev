@@ -2,7 +2,7 @@ import './topBarNavigation.css';
 
 import { FC, useEffect, useState } from 'react';
 import { Pane } from 'evergreen-ui';
-import { navItems } from '../../constants/textContent';
+import { navItems, RESUME_FILE_NAME } from '../../constants/textContent';
 import DownloadIcon from '../../assets/downarrowcircle_down_arrow_direction_move_icon.png';
 import orangeDownloadIcon from '../../assets/orange_downarrowcircle_down_arrow_direction_move_icon.png';
 
@@ -18,7 +18,7 @@ const TopBarNavigation: FC<topBarNavigationProps> = ({ scrollFuncList, sectionRe
     const [scrolled, setScrolled] = useState(false);
     const [currentSection, setCurrentSection] = useState(0);
 
-    const fileName = "HugoRenzzoResume.pdf";
+    const fileName = RESUME_FILE_NAME;
 
     useEffect(() => {
         const handleScroll = () => {
@@ -140,7 +140,7 @@ const TopBarNavigation: FC<topBarNavigationProps> = ({ scrollFuncList, sectionRe
                             )
                         })}
                         <div style={{ '--item-index': navItems.length } as React.CSSProperties}>
-                            <a className={`resume-bar ${scrolled ? 'scrolled' : ''}`} href={`${process.env.PUBLIC_URL}/${fileName}`} download="HugoRenzzoResume.pdf">
+                            <a className={`resume-bar ${scrolled ? 'scrolled' : ''}`} href={`${process.env.PUBLIC_URL}/${fileName}`} download={RESUME_FILE_NAME}>
                                 <img className='resume-download-icon' src={scrolled? orangeDownloadIcon : DownloadIcon} alt="Download resume" />
                                 <p className='resume-text'>DOWNLOAD RESUME</p>
                             </a>

@@ -5,20 +5,20 @@ import { motion } from 'framer-motion';
 import { Chrono } from "react-chrono";
 
 import { workExperienceItems } from '../../constants/textContent';
+import { useIsMobile } from '../../hooks/useIsMobile';
 
 interface ModernWorkTimelineProps {}
 
 const ModernWorkTimeline: FC<ModernWorkTimelineProps> = () => {
-
-    
+    const isMobile = useIsMobile();
 
     return (
         <motion.div
             className='timeline-item'
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.4, ease: 'easeOut' }}
-            viewport={{ once: true, margin: '-50px' }}
+            transition={{ duration: isMobile ? 0.25 : 0.4, ease: 'easeOut' }}
+            viewport={{ once: true, margin: isMobile ? '0px' : '-50px' }}
         >
             <Chrono
                 items={workExperienceItems}

@@ -7,12 +7,14 @@ import Section from '../../compoments/Section/Section';
 import ProjectCard from '../../compoments/ProjectCard/ProjectCard';
 import Button from '../../compoments/Button/Button';
 import { StyleTypes } from '../../constants';
+import { useIsMobile } from '../../hooks/useIsMobile';
 
 interface ProjectSectionProps {
     refPointer: React.RefObject<HTMLDivElement>;
 }
 
 const ProjectSection: FC<ProjectSectionProps> = ({ refPointer }) => {
+    const isMobile = useIsMobile();
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -38,8 +40,8 @@ const ProjectSection: FC<ProjectSectionProps> = ({ refPointer }) => {
         <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: 'easeOut' }}
-            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: isMobile ? 0.3 : 0.5, ease: 'easeOut' }}
+            viewport={{ once: true, margin: isMobile ? '0px' : '-100px' }}
         >
             <Section
                 header={projectsHeader}
@@ -50,7 +52,7 @@ const ProjectSection: FC<ProjectSectionProps> = ({ refPointer }) => {
                             className="projects-grid"
                             initial="hidden"
                             whileInView="visible"
-                            viewport={{ once: true, margin: '-50px' }}
+                            viewport={{ once: true, margin: isMobile ? '0px' : '-50px' }}
                             variants={containerVariants}
                         >
                             {projectsItems.map((project) => (
@@ -67,7 +69,7 @@ const ProjectSection: FC<ProjectSectionProps> = ({ refPointer }) => {
                             className="projects-cta"
                             initial="hidden"
                             whileInView="visible"
-                            viewport={{ once: true, margin: '-50px' }}
+                            viewport={{ once: true, margin: isMobile ? '0px' : '-50px' }}
                             variants={buttonVariants}
                         >
                             <Button contentText={'Download My Resume'} type={StyleTypes.Primary} />

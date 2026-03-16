@@ -12,7 +12,7 @@
 }
 
 .section-header.dark {
-    color: white;
+    color: #FFFFFF;
 }
 
 .section-desc {
@@ -27,7 +27,7 @@
 }
 
 .section-desc.dark {
-    color: white;
+    color: #FFFFFF;
 }
 
 .section-divider {
@@ -38,5 +38,5 @@
 }
 
 .section-divider.dark {
-    background-color: white;
+    background-color: #FFFFFF;
 }

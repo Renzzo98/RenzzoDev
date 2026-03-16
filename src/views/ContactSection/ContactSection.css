@@ -12,6 +12,9 @@
     width: 100%;
     background: #000000;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .contact-content {
@@ -160,6 +163,10 @@
 }
 
 @media (max-width: 480px) {
+    .contact-container {
+        min-height: 100vh;
+    }
+
     .contact-content {
         padding: 30px 15px;
     }

@@ -5,6 +5,9 @@ const BIRTH_YEAR = 1998;
 const BIRTH_MONTH = 1; // February (0-indexed)
 const BIRTH_DATE = 3;
 
+// Resume file - update this path when you replace the resume file
+export const RESUME_FILE_NAME = "HugoRenzzo_Resume.pdf";
+
 const getAge = () => {
   const today = new Date();
   let age = today.getFullYear() - BIRTH_YEAR;

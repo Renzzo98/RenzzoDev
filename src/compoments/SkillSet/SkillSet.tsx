@@ -3,26 +3,27 @@ import './SkillSet.css';
 import { FC } from 'react';
 import { motion } from 'framer-motion';
 import ScrollBar from '../ScrollBar/ScrollBar';
+import { useIsMobile } from '../../hooks/useIsMobile';
 
 interface SkillSetProps {}
 
 const SkillSet: FC<SkillSetProps> = () => {
+    const isMobile = useIsMobile();
 
-        
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.08,
-                delayChildren: 0.1,
+                staggerChildren: isMobile ? 0.03 : 0.08,
+                delayChildren: isMobile ? 0.05 : 0.1,
             },
         },
     };
 
     const itemVariants = {
         hidden: { opacity: 0, x: -30 },
-        visible: { opacity: 1, x: 0, transition: { duration: 0.3, ease: 'easeOut' } },
+        visible: { opacity: 1, x: 0, transition: { duration: isMobile ? 0.15 : 0.3, ease: 'easeOut' } },
     };
 
     return (
@@ -30,7 +31,7 @@ const SkillSet: FC<SkillSetProps> = () => {
             className='skill-set-container'
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '-50px' }}
+            viewport={{ once: true, margin: '0px' }}
             variants={containerVariants}
         >
             <motion.p className='skill-header' variants={itemVariants}>Here are my Skills...</motion.p>
