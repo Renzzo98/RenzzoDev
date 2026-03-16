@@ -47,8 +47,9 @@ const TopBarNavigation: FC<topBarNavigationProps> = ({ scrollFuncList, sectionRe
                 // Dynamically calculate based on section positions
                 let currentIdx = 0;
                 for (let i = sectionRefs.length - 1; i >= 0; i--) {
-                    if (sectionRefs[i]?.current) {
-                        const sectionTop = sectionRefs[i].current.getBoundingClientRect().top + window.scrollY;
+                    const ref = sectionRefs[i];
+                    if (ref && ref.current) {
+                        const sectionTop = ref.current.getBoundingClientRect().top + window.scrollY;
                         if (scrollPos >= sectionTop - 100) {
                             currentIdx = i;
                             break;
