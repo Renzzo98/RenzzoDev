@@ -162,13 +162,7 @@
     }
 }
 
-@media (max-width: 1440px) {
-    .contact-container {
-        min-height: 100vh;
-        padding-top: 120vh;
-        padding-bottom: 170vh;
-    }
-
+@media (max-width: 1024px) {
     .contact-content {
         padding: 30px 15px;
     }
