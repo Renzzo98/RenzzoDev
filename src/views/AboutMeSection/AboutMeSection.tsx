@@ -2,7 +2,7 @@ import './AboutMeSection.css';
 
 import { FC } from 'react';
 import { motion } from 'framer-motion';
-import { aboutMeDesc, aboutMeHeader } from '../../constants/textContent';
+import { aboutMeHeader } from '../../constants/textContent';
 import Section from '../../compoments/Section/Section';
 import SkillSet from '../../compoments/SkillSet/SkillSet';
 import AboutMeVisualizations from '../../compoments/AboutMeVisualizations/AboutMeVisualizations';
@@ -22,12 +22,11 @@ const AboutMeSection: FC<AboutMeSectionProps> = ({ refPointer }) => {
         >
             <Section
                 header={aboutMeHeader}
-                desc={aboutMeDesc}
                 refPointer={refPointer}
                 childComponent={
                     <>
-                        <SkillSet/>
                         <AboutMeVisualizations />
+                        <SkillSet/>
                     </>
                 }
             />

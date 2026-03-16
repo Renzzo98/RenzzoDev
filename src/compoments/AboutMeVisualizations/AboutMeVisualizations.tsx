@@ -1,6 +1,7 @@
 import './AboutMeVisualizations.css';
 import { FC } from 'react';
 import { motion } from 'framer-motion';
+import { FiBox, FiSmartphone, FiZap, FiUsers, FiEdit3 } from 'react-icons/fi';
 
 interface AboutMeVisualizationsProps {}
 
@@ -15,11 +16,11 @@ const AboutMeVisualizations: FC<AboutMeVisualizationsProps> = () => {
 
     // Pillars
     const pillars = [
-        { icon: '🏗️', title: 'Architecture', desc: 'Design systems, micro-frontends, scalable systems' },
-        { icon: '📱', title: 'Cross-Platform', desc: 'Angular, SwiftUI, React' },
-        { icon: '⚡', title: 'Performance', desc: 'Optimization, high-impact improvements' },
-        { icon: '👥', title: 'Leadership', desc: 'Team mentoring, technical direction' },
-        { icon: '🎨', title: 'Design', desc: 'UX/UI, product thinking' },
+        { icon: FiBox, title: 'Architecture', desc: 'Design systems, micro-frontends, scalable systems' },
+        { icon: FiSmartphone, title: 'Cross-Platform', desc: 'Angular, SwiftUI, React' },
+        { icon: FiZap, title: 'Performance', desc: 'Optimization, high-impact improvements' },
+        { icon: FiUsers, title: 'Leadership', desc: 'Team mentoring, technical direction' },
+        { icon: FiEdit3, title: 'Design', desc: 'UX/UI, product thinking' },
     ];
 
     return (
@@ -39,7 +40,7 @@ const AboutMeVisualizations: FC<AboutMeVisualizationsProps> = () => {
                             transition={{ delay: idx * 0.1 }}
                             viewport={{ once: true }}
                         >
-                            <div className='pillar-icon'>{pillar.icon}</div>
+                            <div className='pillar-icon'><pillar.icon /></div>
                             <h4>{pillar.title}</h4>
                             <p>{pillar.desc}</p>
                         </motion.div>

@@ -28,29 +28,44 @@ const ModernTemplate: FC<modernTemplateProps> = () => {
         })
     };
 
+    const NAVBAR_HEIGHT = 85;
+
     const scrollToAboutSection = () => {
         if (sectionAbout.current) {
-            sectionAbout.current.scrollIntoView({ behavior: 'smooth' });
+            const elementTop = sectionAbout.current.getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({
+                top: elementTop - NAVBAR_HEIGHT,
+                behavior: 'smooth'
+            });
         }
     };
 
     const scrollToExpSection = () => {
         if (sectionExp.current) {
-            sectionExp.current.scrollIntoView({ behavior: 'smooth' });
+            const elementTop = sectionExp.current.getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({
+                top: elementTop - NAVBAR_HEIGHT,
+                behavior: 'smooth'
+            });
         }
     };
 
     const scrollToProjectsSection = () => {
         if (sectionProjects.current) {
-            sectionProjects.current.scrollIntoView({ behavior: 'smooth' });
+            const elementTop = sectionProjects.current.getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({
+                top: elementTop - NAVBAR_HEIGHT,
+                behavior: 'smooth'
+            });
         }
     };
 
     const scrollToContactSection = () => {
+        // Scroll to the absolute bottom of the page
         window.scrollTo({
-            top: document.body.scrollHeight,
+            top: document.documentElement.scrollHeight - window.innerHeight,
             behavior: 'smooth'
-        })
+        });
     };
 
     const scrollFunctions = [scrollToHeaderSection, scrollToAboutSection, scrollToExpSection, scrollToProjectsSection, scrollToContactSection];

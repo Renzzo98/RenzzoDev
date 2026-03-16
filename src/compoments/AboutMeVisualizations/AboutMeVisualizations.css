@@ -83,8 +83,17 @@
 }
 
 .pillar-icon {
-    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 12px;
+}
+
+.pillar-icon svg {
+    width: 48px;
+    height: 48px;
+    color: #ff9900;
+    stroke-width: 1.5;
 }
 
 .pillar-card h4 {

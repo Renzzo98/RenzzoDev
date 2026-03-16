@@ -26,13 +26,19 @@ const TopBarNavigation: FC<topBarNavigationProps> = ({ scrollFuncList })  => {
                 setScrolled(isScrolled);
             }
 
-            // Update current section based on scroll position
-            const sectionHeights = [100, 500, 1200, 2000, 2800];
-            for (let i = sectionHeights.length - 1; i >= 0; i--) {
-                if (window.scrollY >= sectionHeights[i]) {
-                    setCurrentSection(i);
-                    break;
-                }
+            // Update current section based on scroll position (simple threshold-based)
+            const scrollPos = window.scrollY + 100; // Add offset for navbar
+
+            if (scrollPos < 200) {
+                setCurrentSection(0);
+            } else if (scrollPos < 800) {
+                setCurrentSection(1);
+            } else if (scrollPos < 1400) {
+                setCurrentSection(2);
+            } else if (scrollPos < 2200) {
+                setCurrentSection(3);
+            } else {
+                setCurrentSection(4);
             }
         };
 
@@ -83,15 +89,6 @@ const TopBarNavigation: FC<topBarNavigationProps> = ({ scrollFuncList })  => {
     const handleScrollFunction = (scrollFunc: () => void) => {
         scrollFunc();
         toggleMenu();
-        setTimeout(() => {
-            const currentScrollPosition = window.scrollY;
-            const offsetPosition = currentScrollPosition - 250;
-            
-            window.scrollTo({
-              top: offsetPosition,
-              behavior: 'smooth'
-            });
-          }, 600); // The timeout duration might need adjustment
     }
 
     
@@ -103,18 +100,16 @@ const TopBarNavigation: FC<topBarNavigationProps> = ({ scrollFuncList })  => {
                     <span className={`menu-icon ${isMenuOpen ? 'hide' : 'show'}`}>☰</span>
                     <span className={`menu-icon ${isMenuOpen ? 'show' : 'hide'}`}>✕</span>
                 </div>
-                {currentSection > 0 && (
-                    <div className="breadcrumb">
-                        <span
-                            className="breadcrumb-home"
-                            onClick={scrollToHome}
-                        >
-                            Home
-                        </span>
-                        <span className="breadcrumb-separator">/</span>
-                        <span className="breadcrumb-current">{navItems[currentSection]}</span>
-                    </div>
-                )}
+                <div className={`breadcrumb ${currentSection > 0 ? 'visible' : 'hidden'}`}>
+                    <span
+                        className="breadcrumb-home"
+                        onClick={scrollToHome}
+                    >
+                        Home
+                    </span>
+                    <span className="breadcrumb-separator">/</span>
+                    <span className="breadcrumb-current">{navItems[currentSection]}</span>
+                </div>
             </div>
             {isMenuRendered && (
                 <div className={`top-nav-menu-container ${isMenuOpen ? 'show' : 'hide'}`}>
