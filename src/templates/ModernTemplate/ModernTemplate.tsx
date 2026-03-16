@@ -63,7 +63,7 @@ const ModernTemplate: FC<modernTemplateProps> = () => {
     const scrollToContactSection = () => {
         // Scroll to the absolute bottom of the page
         window.scrollTo({
-            top: document.documentElement.scrollHeight - window.innerHeight,
+            top: document.documentElement.scrollHeight,
             behavior: 'smooth'
         });
     };
