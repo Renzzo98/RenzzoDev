@@ -2,26 +2,65 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 40px;
     margin-top: 40px;
 }
 
-.visualization-option {
-    display: flex;
-    flex-direction: column;
+.intro-text {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #2d2d2d;
+    margin: 0 0 20px 0;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+/* Highlights Section */
+.highlights-section {
+    width: 100%;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 20px;
 }
 
-.option-title {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #ff9900;
-    font-family: 'Montserrat', sans-serif;
-    margin: 0 0 20px 0;
+.highlight-card {
+    background: linear-gradient(135deg, rgba(255, 140, 0, 0.15), rgba(255, 165, 0, 0.1));
+    border: 2px solid rgba(255, 165, 0, 0.3);
+    border-radius: 12px;
+    padding: 30px 20px;
     text-align: center;
+    transition: all 0.3s ease;
 }
 
-/* Option 1: Pillars */
+.highlight-card:hover {
+    background: linear-gradient(135deg, rgba(255, 140, 0, 0.25), rgba(255, 165, 0, 0.18));
+    border-color: rgba(255, 165, 0, 0.6);
+    transform: scale(1.05);
+}
+
+.highlight-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ff9900;
+    margin-bottom: 8px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.highlight-label {
+    font-size: 0.9rem;
+    color: #2d2d2d;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Pillars Section */
+.pillars-section {
+    width: 100%;
+}
+
 .pillars-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -63,157 +102,48 @@
     line-height: 1.5;
 }
 
-/* Option 2: Highlights */
-.spotlight-intro {
-    text-align: center;
-    font-size: 1.1rem;
-    color: #2d2d2d;
-    margin: 0 0 30px 0;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.highlights-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-}
-
-.highlight-card {
-    background: linear-gradient(135deg, rgba(255, 140, 0, 0.15), rgba(255, 165, 0, 0.1));
-    border: 2px solid rgba(255, 165, 0, 0.3);
-    border-radius: 12px;
-    padding: 30px 20px;
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.highlight-card:hover {
-    background: linear-gradient(135deg, rgba(255, 140, 0, 0.25), rgba(255, 165, 0, 0.18));
-    border-color: rgba(255, 165, 0, 0.6);
-    transform: scale(1.05);
-}
-
-.highlight-number {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #ff9900;
-    margin-bottom: 8px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.highlight-label {
-    font-size: 0.9rem;
-    color: #2d2d2d;
-    font-weight: 600;
-    font-family: 'Montserrat', sans-serif;
-}
-
-/* Option 3: Two Column */
-.two-column {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: start;
-}
-
-.column-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.intro-text {
-    font-size: 1rem;
-    color: #2d2d2d;
-    line-height: 1.8;
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.column-right {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.skill-category {
-    background: linear-gradient(135deg, rgba(255, 140, 0, 0.15), rgba(255, 165, 0, 0.1));
-    border-left: 4px solid #ff9900;
-    border-radius: 8px;
-    padding: 16px;
-}
-
-.skill-category h5 {
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: #ff9900;
-    margin: 0 0 10px 0;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.skill-tag {
-    display: inline-block;
-    background: rgba(255, 165, 0, 0.2);
-    border: 1px solid rgba(255, 165, 0, 0.4);
-    color: #7c2d12;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    font-family: 'Montserrat', sans-serif;
-}
-
-/* Option 4: Tag Grid */
-.tag-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
-}
-
-.tag {
-    display: inline-block;
-    background: linear-gradient(135deg, rgba(255, 140, 0, 0.15), rgba(255, 165, 0, 0.1));
-    border: 1.5px solid rgba(255, 165, 0, 0.3);
-    color: #7c2d12;
-    padding: 10px 18px;
-    border-radius: 25px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    font-family: 'Montserrat', sans-serif;
-    transition: all 0.2s ease;
-    cursor: pointer;
-}
-
-.tag:hover {
-    background: linear-gradient(135deg, rgba(255, 140, 0, 0.25), rgba(255, 165, 0, 0.18));
-    border-color: rgba(255, 165, 0, 0.6);
-    transform: scale(1.05);
-}
-
 @media (max-width: 768px) {
-    .pillars-grid {
-        grid-template-columns: 1fr;
+    .visualizations-container {
+        gap: 40px;
     }
 
     .highlights-grid {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .two-column {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .visualization-option {
         gap: 15px;
+    }
+
+    .highlight-card {
+        padding: 24px 16px;
+    }
+
+    .highlight-number {
+        font-size: 2rem;
+    }
+
+    .highlight-label {
+        font-size: 0.8rem;
+    }
+
+    .pillars-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .pillar-card {
+        padding: 18px;
+    }
+
+    .pillar-icon {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    .pillar-card h4 {
+        font-size: 1rem;
+        margin: 10px 0 6px 0;
+    }
+
+    .pillar-card p {
+        font-size: 0.85rem;
     }
 }

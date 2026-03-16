@@ -69,7 +69,9 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
             )}
 
             <div className="project-links">
-                {project.links.map((link, idx) => (
+                {project.links
+                    .filter(link => link.label !== 'GitHub')
+                    .map((link, idx) => (
                     <a
                         key={idx}
                         href={link.url}
