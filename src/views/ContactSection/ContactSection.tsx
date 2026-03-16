@@ -67,13 +67,6 @@ const ContactSection: FC<ContactSectionProps> = ({ refPointer }) => {
                     </motion.div>
                 }
             />
-            <motion.div
-                className="contact-motion-divider"
-                initial={{ x: "100%" }}
-                whileInView={{ x: 0 }}
-                transition={{ duration: 1, ease: "easeInOut" }}
-                viewport={{ once: true }}
-            />
         </motion.div>
 
     ) 

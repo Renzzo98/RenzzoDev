@@ -6,12 +6,15 @@
     justify-content: flex-end;
     position: sticky;
     top: 0;
-    z-index: 5;
+    z-index: 1000;
+    background-color: white;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: none;
 }
 
 .topBarNav.scrolled {
-    background-color: black; /* New background color when scrolled */
-    /* Add other styling for scrolled state if needed */
+    background-color: black;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 
