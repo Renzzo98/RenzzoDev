@@ -199,6 +199,7 @@ export const projectsItems = [
             "Bilingual study guide export (English & Spanish)",
             "Persistent progress across sessions"
         ],
+        status: "Completed and live demo available",
         liveDemo: "https://citzpractest.web.app",
         github: "https://github.com/Renzzo98/MiCiudadano",
         links: [
@@ -218,6 +219,7 @@ export const projectsItems = [
             "One-click toggle on/off",
             "Works seamlessly with Google Search"
         ],
+        status: "App Store submission planned Q2 2026",
         github: "https://github.com/Renzzo98/ByeBot",
         links: [
             { label: "GitHub", url: "https://github.com/Renzzo98/ByeBot" }
