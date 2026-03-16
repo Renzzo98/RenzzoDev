@@ -1,6 +1,7 @@
 import './SkillSet.css';
 
 import { FC } from 'react';
+import { motion } from 'framer-motion';
 import ScrollBar from '../ScrollBar/ScrollBar';
 import Button from '../Button/Button';
 import { StyleTypes } from '../../constants';
@@ -10,18 +11,40 @@ interface SkillSetProps {}
 const SkillSet: FC<SkillSetProps> = () => {
 
         
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.15,
+                delayChildren: 0.2,
+            },
+        },
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, x: -30 },
+        visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+    };
+
     return (
-        <div className='skill-set-container'>
-            <p className='skill-header'>Here are my Skills...</p>
-            <ScrollBar title='Angular' percentage={85} />
-            <ScrollBar title='React' percentage={75} />
-            <ScrollBar title='Typescript' percentage={90} />
-            <ScrollBar title='Java' percentage={70} />
-            <ScrollBar title='Python' percentage={80} />
-            <ScrollBar title='Flutter' percentage={75} />
-            <ScrollBar title='Creativity' percentage={300} />
-            <Button contentText={'Download cv'} type={StyleTypes.Secondary} />
-        </div>
+        <motion.div
+            className='skill-set-container'
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-50px' }}
+            variants={containerVariants}
+        >
+            <motion.p className='skill-header' variants={itemVariants}>Here are my Skills...</motion.p>
+            <motion.div variants={itemVariants}><ScrollBar title='Angular' percentage={85} /></motion.div>
+            <motion.div variants={itemVariants}><ScrollBar title='React' percentage={75} /></motion.div>
+            <motion.div variants={itemVariants}><ScrollBar title='Typescript' percentage={90} /></motion.div>
+            <motion.div variants={itemVariants}><ScrollBar title='Java' percentage={70} /></motion.div>
+            <motion.div variants={itemVariants}><ScrollBar title='Python' percentage={80} /></motion.div>
+            <motion.div variants={itemVariants}><ScrollBar title='Flutter' percentage={75} /></motion.div>
+            <motion.div variants={itemVariants}><ScrollBar title='Creativity' percentage={300} /></motion.div>
+            <motion.div variants={itemVariants}><Button contentText={'Download cv'} type={StyleTypes.Secondary} /></motion.div>
+        </motion.div>
     ) 
 }
 
