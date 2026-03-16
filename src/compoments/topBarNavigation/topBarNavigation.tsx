@@ -8,9 +8,10 @@ import orangeDownloadIcon from '../../assets/orange_downarrowcircle_down_arrow_d
 
 interface topBarNavigationProps {
     scrollFuncList: (() => void)[];
+    sectionRefs?: React.RefObject<HTMLDivElement>[];
 }
 
-const TopBarNavigation: FC<topBarNavigationProps> = ({ scrollFuncList })  => {
+const TopBarNavigation: FC<topBarNavigationProps> = ({ scrollFuncList, sectionRefs })  => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isMenuRendered, setIsMenuRendered] = useState(false);
@@ -29,16 +30,32 @@ const TopBarNavigation: FC<topBarNavigationProps> = ({ scrollFuncList })  => {
             // Update current section based on scroll position
             const scrollPos = window.scrollY;
 
-            if (scrollPos < 547) {
-                setCurrentSection(0);
-            } else if (scrollPos < 2758) {
-                setCurrentSection(1);
-            } else if (scrollPos < 7932) {
-                setCurrentSection(2);
-            } else if (scrollPos < 11700) {
-                setCurrentSection(3);
+            if (!sectionRefs || sectionRefs.length === 0) {
+                // Fallback to static thresholds if refs not available
+                if (scrollPos < 547) {
+                    setCurrentSection(0);
+                } else if (scrollPos < 2758) {
+                    setCurrentSection(1);
+                } else if (scrollPos < 7932) {
+                    setCurrentSection(2);
+                } else if (scrollPos < 11700) {
+                    setCurrentSection(3);
+                } else {
+                    setCurrentSection(4);
+                }
             } else {
-                setCurrentSection(4);
+                // Dynamically calculate based on section positions
+                let currentIdx = 0;
+                for (let i = sectionRefs.length - 1; i >= 0; i--) {
+                    if (sectionRefs[i]?.current) {
+                        const sectionTop = sectionRefs[i].current.getBoundingClientRect().top + window.scrollY;
+                        if (scrollPos >= sectionTop - 100) {
+                            currentIdx = i;
+                            break;
+                        }
+                    }
+                }
+                setCurrentSection(currentIdx);
             }
         };
 
@@ -49,7 +66,7 @@ const TopBarNavigation: FC<topBarNavigationProps> = ({ scrollFuncList })  => {
         return () => {
         window.removeEventListener('scroll', handleScroll);
         };
-    }, [scrolled]);
+    }, [scrolled, sectionRefs]);
 
 
     const toggleMenu = () => {

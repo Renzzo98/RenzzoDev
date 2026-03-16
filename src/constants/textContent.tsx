@@ -178,7 +178,7 @@ export const projectsItems = [
         status: "Launching Q1 2026 (TestFlight available)",
         github: "https://github.com/Renzzo98/Donezzo",
         links: [
-            { label: "TestFlight", url: "https://github.com/Renzzo98/Donezzo" },
+            { label: "TestFlight", url: process.env.REACT_APP_DONEZZOTESTFLIGHT_URL || "" },
             { label: "GitHub", url: "https://github.com/Renzzo98/Donezzo" }
         ],
         featured: true

@@ -69,11 +69,12 @@ const ModernTemplate: FC<modernTemplateProps> = () => {
     };
 
     const scrollFunctions = [scrollToHeaderSection, scrollToAboutSection, scrollToExpSection, scrollToProjectsSection, scrollToContactSection];
+    const sectionRefs = [sectionHeader, sectionAbout, sectionExp, sectionProjects, sectionContact];
 
     return (
         <div>
             <Pane className='modernTemplate'>
-                <TopBarNavigation scrollFuncList={scrollFunctions} />
+                <TopBarNavigation scrollFuncList={scrollFunctions} sectionRefs={sectionRefs} />
                 <div className='body-content'>
                     <TitleCard refPointer={sectionHeader}/>
                     <AboutMeSection refPointer={sectionAbout}/>
