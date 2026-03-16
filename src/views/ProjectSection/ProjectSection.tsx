@@ -1,6 +1,7 @@
 import './ProjectSection.css';
 
 import { FC } from 'react';
+import { motion } from 'framer-motion';
 import { projectsHeader, projectsItems } from '../../constants/textContent';
 import Section from '../../compoments/Section/Section';
 import ProjectCard from '../../compoments/ProjectCard/ProjectCard';
@@ -10,18 +11,49 @@ interface ProjectSectionProps {
 }
 
 const ProjectSection: FC<ProjectSectionProps> = ({ refPointer }) => {
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.15,
+                delayChildren: 0.1,
+            },
+        },
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 40 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+    };
+
     return (
-        <Section
-            header={projectsHeader}
-            refPointer={refPointer}
-            childComponent={
-                <div className="projects-grid">
-                    {projectsItems.map((project) => (
-                        <ProjectCard key={project.id} project={project} />
-                    ))}
-                </div>
-            }
-        />
+        <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            viewport={{ once: true, margin: '-100px' }}
+        >
+            <Section
+                header={projectsHeader}
+                refPointer={refPointer}
+                childComponent={
+                    <motion.div
+                        className="projects-grid"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, margin: '-50px' }}
+                        variants={containerVariants}
+                    >
+                        {projectsItems.map((project) => (
+                            <motion.div key={project.id} variants={itemVariants}>
+                                <ProjectCard project={project} />
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                }
+            />
+        </motion.div>
     );
 };
 

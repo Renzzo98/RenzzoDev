@@ -21,7 +21,6 @@
     .projects-grid {
         grid-template-columns: 1fr;
         gap: 25px;
-        padding: 0 16px;
     }
 
     .projects-grid .project-card.featured {
