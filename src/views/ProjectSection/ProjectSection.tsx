@@ -54,7 +54,11 @@ const ProjectSection: FC<ProjectSectionProps> = ({ refPointer }) => {
                             variants={containerVariants}
                         >
                             {projectsItems.map((project) => (
-                                <motion.div key={project.id} variants={itemVariants}>
+                                <motion.div
+                                    key={project.id}
+                                    variants={itemVariants}
+                                    className={project.featured ? 'featured' : ''}
+                                >
                                     <ProjectCard project={project} />
                                 </motion.div>
                             ))}
