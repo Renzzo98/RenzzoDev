@@ -29,10 +29,10 @@ const SkillSet: FC<SkillSetProps> = () => {
     return (
         <motion.div
             className='skill-set-container'
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: '0px' }}
-            variants={containerVariants}
+            initial={isMobile ? "visible" : "hidden"}
+            whileInView={isMobile ? undefined : "visible"}
+            viewport={isMobile ? undefined : { once: true, margin: '0px' }}
+            variants={isMobile ? undefined : containerVariants}
         >
             <motion.p className='skill-header' variants={itemVariants}>Here are my Skills...</motion.p>
             <motion.div variants={itemVariants}><ScrollBar title='Angular' percentage={85} /></motion.div>
