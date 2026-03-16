@@ -12,6 +12,12 @@ const Button: FC<IconButtonButtonProps> = ({ contentText, type }) => {
     const fileName = "HugoRenzzoResume.pdf";
 
     switch (type){
+        case StyleTypes.Primary:
+            return (
+                <div className='btn-container'>
+                    <a className='btn primary' href={`${process.env.PUBLIC_URL}/${fileName}`} download="HugoRenzzoResume.pdf">{ contentText }</a>
+                </div>
+            )
         case StyleTypes.Secondary:
             return (
                 <div className='btn-container'>

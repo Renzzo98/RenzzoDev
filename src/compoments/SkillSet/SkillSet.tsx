@@ -3,8 +3,6 @@ import './SkillSet.css';
 import { FC } from 'react';
 import { motion } from 'framer-motion';
 import ScrollBar from '../ScrollBar/ScrollBar';
-import Button from '../Button/Button';
-import { StyleTypes } from '../../constants';
 
 interface SkillSetProps {}
 
@@ -44,7 +42,6 @@ const SkillSet: FC<SkillSetProps> = () => {
             <motion.div variants={itemVariants}><ScrollBar title='Python' percentage={80} /></motion.div>
             <motion.div variants={itemVariants}><ScrollBar title='Flutter' percentage={75} /></motion.div>
             <motion.div variants={itemVariants}><ScrollBar title='Creativity' percentage={300} /></motion.div>
-            <motion.div variants={itemVariants}><Button contentText={'Download cv'} type={StyleTypes.Secondary} /></motion.div>
         </motion.div>
     ) 
 }

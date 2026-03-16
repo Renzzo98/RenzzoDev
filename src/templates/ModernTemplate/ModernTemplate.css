@@ -2,11 +2,10 @@
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
-    padding-top: 70px;
 }
 
 .body-content {
-    padding: 0 16px;
+    padding: 70px 16px 0 16px;
 }
 
 @media (min-width: 1025px) {

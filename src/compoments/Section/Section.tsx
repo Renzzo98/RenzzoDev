@@ -6,7 +6,7 @@ import { Pane } from 'evergreen-ui';
 
 interface SectionProps {
     header: string;
-    desc?: string;
+    desc?: string | React.ReactNode;
     divider?: boolean;
     topSpacing?: number;
     botSpacing?: number;
@@ -33,11 +33,19 @@ const Section: FC<SectionProps> = ({ header, desc, divider = true, topSpacing, b
         >
             <p className={`section-header ${altBackground ? 'dark' : ''}`}>{header.toUpperCase()}</p>
             {divider ? <hr className={`section-divider ${altBackground ? 'dark' : ''}`} /> : <div /> }
-            {desc ? 
-                <p 
-                    className={`section-desc ${altBackground ? 'dark' : ''}`}
-                    style={{ padding: MobileView? '1.4rem' : '', fontSize: MobileView? '' : '1.4rem'}}
-                >{desc}</p> : 
+            {desc ?
+                typeof desc === 'string' ? (
+                    <p
+                        className={`section-desc ${altBackground ? 'dark' : ''}`}
+                        style={{ padding: MobileView? '1.4rem' : '', fontSize: MobileView? '' : '1.4rem'}}
+                    >{desc}</p>
+                ) : (
+                    <div
+                        className={`section-desc ${altBackground ? 'dark' : ''}`}
+                        style={{ padding: MobileView? '1.4rem' : '', fontSize: MobileView? '' : '1.4rem'}}
+                    >{desc}</div>
+                )
+                :
                 ''
             }
             {childComponent}

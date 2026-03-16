@@ -19,7 +19,11 @@ const getAge = () => {
 };
 
 export const aboutMeHeader = "About Me";
-export const aboutMeDesc = `I'm a product-focused engineer obsessed with building beautiful, performant UI experiences that users love. With deep expertise in Angular and micro-frontend architecture, I thrive solving complex UX problems—whether that's architecting scalable design systems, shipping iOS apps for everyday problems, or tweaking performance down to the millisecond. I've worn multiple hats (engineer, product manager, UX designer) at BlackRock, which has shaped how I think: every pixel matters, but so does the system behind it. I mentor engineers and lead design-driven initiatives, believing great UI is the intersection of technical excellence and human-centered design. Looking for lead UI roles where I can build experiences that are both beautifully designed and technically sound.`
+export const aboutMeDesc = (
+    <>
+        <strong>Lead Frontend Engineer</strong> specializing in <strong>scalable UI architecture</strong> and <strong>design systems</strong>. Expert in <strong>Angular</strong>, <strong>SwiftUI</strong>, <strong>TypeScript</strong>, and <strong>micro-frontend architecture</strong>—building beautiful, high-performance experiences across web and iOS. I architect <strong>design systems</strong> that scale across teams, optimize <strong>performance</strong> to the millisecond, and lead <strong>technical initiatives</strong> that ship products to millions of users. Proven track record: architected <strong>4+ micro-frontends</strong> serving <strong>500+ enterprise users</strong> at BlackRock, reduced component implementation time by <strong>40%</strong>, and ship <strong>iOS apps</strong> from ideation to App Store. <strong>Technical leader</strong> mentoring engineers, <strong>product strategist</strong> bridging design and engineering, <strong>full-stack architect</strong> solving complex <strong>UX problems</strong> and <strong>system design challenges</strong>. Seeking <strong>Senior UI Engineer</strong> or <strong>Lead Frontend</strong> roles building next-gen experiences.
+    </>
+)
 export const servicesHeader = "Services";
 export const expHeader = "Experience";
 export const conactHeader = "Contact Me"

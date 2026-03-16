@@ -50,7 +50,7 @@ const TopBarNavigation: FC<topBarNavigationProps> = ({ scrollFuncList })  => {
         if (isMenuOpen) {
             // Start the hide animation
             setIsMenuOpen(false);
-            
+
             // Wait for the animation to finish before removing the menu from the DOM
             setTimeout(() => {
             setIsMenuRendered(false);
@@ -62,6 +62,21 @@ const TopBarNavigation: FC<topBarNavigationProps> = ({ scrollFuncList })  => {
             setTimeout(() => {
                 setIsMenuOpen(true);
             }, 10);
+        }
+    };
+
+    const scrollToHome = () => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
+        // Close the menu if it's open
+        if (isMenuOpen) {
+            setIsMenuOpen(false);
+            setTimeout(() => {
+                setIsMenuRendered(false);
+            }, 250);
         }
     };
 
@@ -90,7 +105,12 @@ const TopBarNavigation: FC<topBarNavigationProps> = ({ scrollFuncList })  => {
                 </div>
                 {currentSection > 0 && (
                     <div className="breadcrumb">
-                        <span className="breadcrumb-home">Home</span>
+                        <span
+                            className="breadcrumb-home"
+                            onClick={scrollToHome}
+                        >
+                            Home
+                        </span>
                         <span className="breadcrumb-separator">/</span>
                         <span className="breadcrumb-current">{navItems[currentSection]}</span>
                     </div>
