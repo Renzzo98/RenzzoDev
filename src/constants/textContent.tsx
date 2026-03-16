@@ -54,7 +54,7 @@ export const workExperienceItems = [
         timelineContent: (
             <div>
                 <div className="card-logo-container">
-                    <img src="https://logo.clearbit.com/blackrock.com?size=80" alt="BlackRock" className="card-company-logo" />
+                    <div className="company-badge company-badge--blackrock">BR</div>
                 </div>
                 <p>Frontend engineer on the Portfolio Management platform, building a suite of micro-frontend personas for an enterprise-scale internal application.</p>
                 <ul>
@@ -74,7 +74,7 @@ export const workExperienceItems = [
         timelineContent: (
             <div>
                 <div className="card-logo-container">
-                    <img src="https://logo.clearbit.com/blackrock.com?size=80" alt="BlackRock" className="card-company-logo" />
+                    <div className="company-badge company-badge--blackrock">BR</div>
                 </div>
                 <p>Full rotation across engineering, product management, and UX design within the Portfolio Management division.</p>
                 <ul>
@@ -94,7 +94,7 @@ export const workExperienceItems = [
         timelineContent: (
             <div>
                 <div className="card-logo-container">
-                    <img src="https://logo.clearbit.com/blackrock.com?size=80" alt="BlackRock" className="card-company-logo" />
+                    <div className="company-badge company-badge--blackrock">BR</div>
                 </div>
                 <p>Built client-facing frontend features for BlackRock's reporting software.</p>
                 <ul>
@@ -112,7 +112,7 @@ export const workExperienceItems = [
         timelineContent: (
             <div>
                 <div className="card-logo-container">
-                    <img src="https://logo.clearbit.com/thecoderschool.com?size=80" alt="The Coder School" className="card-company-logo" />
+                    <div className="company-badge company-badge--coderschool">TCS</div>
                 </div>
                 <p>Introduced students of all ages to programming fundamentals in a 1-on-1 coaching environment.</p>
                 <ul>
@@ -129,7 +129,7 @@ export const workExperienceItems = [
         timelineContent: (
             <div>
                 <div className="card-logo-container">
-                    <img src="https://logo.clearbit.com/hofstra.edu?size=80" alt="Hofstra University" className="card-company-logo" />
+                    <div className="company-badge company-badge--hofstra">HU</div>
                 </div>
                 <p>Led a team researching next-generation intrusion detection systems using low-level CPU instrumentation.</p>
                 <ul>
