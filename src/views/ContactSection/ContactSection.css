@@ -4,12 +4,14 @@
     width: 100%;
     position: relative;
     overflow: hidden;
+    max-width: 100vw;
 }
 
 .contact-container {
     position: relative;
     width: 100%;
     background: #000000;
+    overflow: hidden;
 }
 
 .contact-content {
@@ -97,9 +99,8 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     letter-spacing: 0.5px;
-    margin: 20px auto;
+    margin: 20px 0;
     line-height: 1.6;
-    max-width: 650px;
 }
 
 /* Decorative Divider Below Contact */
@@ -204,7 +205,9 @@
 
 /* Email Button Styling */
 .email-button {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 14px 32px;
     background: linear-gradient(135deg, rgba(255, 165, 0, 0.2), rgba(255, 165, 0, 0.1));
     border: 2px solid rgba(255, 165, 0, 0.5);
@@ -218,6 +221,7 @@
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    text-align: center;
 }
 
 .email-button::before {

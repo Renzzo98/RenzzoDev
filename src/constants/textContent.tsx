@@ -54,7 +54,7 @@ export const workExperienceItems = [
         timelineContent: (
             <div>
                 <div className="card-logo-container">
-                    <div className="company-badge company-badge--blackrock">BR</div>
+                    <img src="/logos/blackrock.png" alt="BlackRock" className="company-logo" />
                 </div>
                 <p>Frontend engineer on the Portfolio Management platform, building a suite of micro-frontend personas for an enterprise-scale internal application.</p>
                 <ul>
@@ -74,7 +74,7 @@ export const workExperienceItems = [
         timelineContent: (
             <div>
                 <div className="card-logo-container">
-                    <div className="company-badge company-badge--blackrock">BR</div>
+                    <img src="/logos/blackrock.png" alt="BlackRock" className="company-logo" />
                 </div>
                 <p>Full rotation across engineering, product management, and UX design within the Portfolio Management division.</p>
                 <ul>
@@ -94,7 +94,7 @@ export const workExperienceItems = [
         timelineContent: (
             <div>
                 <div className="card-logo-container">
-                    <div className="company-badge company-badge--blackrock">BR</div>
+                    <img src="/logos/blackrock.png" alt="BlackRock" className="company-logo" />
                 </div>
                 <p>Built client-facing frontend features for BlackRock's reporting software.</p>
                 <ul>
@@ -112,7 +112,7 @@ export const workExperienceItems = [
         timelineContent: (
             <div>
                 <div className="card-logo-container">
-                    <div className="company-badge company-badge--coderschool">TCS</div>
+                    <img src="/logos/coder_school.png" alt="The Coder School" className="company-logo" />
                 </div>
                 <p>Introduced students of all ages to programming fundamentals in a 1-on-1 coaching environment.</p>
                 <ul>
@@ -129,7 +129,7 @@ export const workExperienceItems = [
         timelineContent: (
             <div>
                 <div className="card-logo-container">
-                    <div className="company-badge company-badge--hofstra">HU</div>
+                    <img src="/logos/hofstra.png" alt="Hofstra University" className="company-logo" />
                 </div>
                 <p>Led a team researching next-generation intrusion detection systems using low-level CPU instrumentation.</p>
                 <ul>
@@ -144,3 +144,79 @@ export const workExperienceItems = [
 ];
 
 export const contactDesc = 'Open to lead UI roles focused on design systems, mobile experiences, and complex UX problems across web and iOS. Looking for companies serious about design excellence.'
+
+export const projectsHeader = "Projects";
+
+export const projectsItems = [
+    {
+        id: 1,
+        title: "DoneZZo",
+        subtitle: "Minimalist iOS Task Manager with iCloud Sync",
+        description: "A beautifully designed iOS task management app featuring real-time collaboration, seamless iCloud sync, and role-based group sharing. Built with SwiftUI, Combine, and CloudKit.",
+        technologies: ["SwiftUI", "Combine", "Core Data", "CloudKit", "Sign in with Apple"],
+        features: [
+            "Task management with priorities and due dates",
+            "Personal and collaborative groups with role-based access",
+            "Dual calendar views (portrait weekly, landscape monthly)",
+            "Weekly Insights with productivity analytics",
+            "Real-time iCloud sync across devices",
+            "Customizable accent color themes"
+        ],
+        status: "Launching Q1 2026 (TestFlight available)",
+        github: "https://github.com/Renzzo98/Donezzo",
+        links: [
+            { label: "TestFlight", url: "https://github.com/Renzzo98/Donezzo" },
+            { label: "GitHub", url: "https://github.com/Renzzo98/Donezzo" }
+        ],
+        featured: true
+    },
+    {
+        id: 2,
+        title: "MiCiudadano",
+        subtitle: "U.S. Citizenship Test Prep Web App",
+        description: "An interactive, state-aware web application helping users prepare for the U.S. Citizenship Test. Features dynamic state-specific content, comprehensive practice modes, and detailed performance analytics.",
+        technologies: ["Angular", "TypeScript", "NgRx", "Material Design", "RxJS"],
+        features: [
+            "State-specific civics answers with real-time officials integration",
+            "Custom and random practice modes",
+            "Interactive flip-card question reveals",
+            "Comprehensive progress tracking and analytics",
+            "Bilingual study guide export (English & Spanish)",
+            "Persistent progress across sessions"
+        ],
+        liveDemo: "https://citzpractest.web.app",
+        github: "https://github.com/Renzzo98/MiCiudadano",
+        links: [
+            { label: "Live Demo", url: "https://citzpractest.web.app" },
+            { label: "GitHub", url: "https://github.com/Renzzo98/MiCiudadano" }
+        ]
+    },
+    {
+        id: 3,
+        title: "ByeBot",
+        subtitle: "Safari Web Extension for Cleaner Search",
+        description: "A lightweight Safari Web Extension that removes AI-generated \"Overviews\" and experimental generative content from Google Search, giving you a cleaner, distraction-free search experience.",
+        technologies: ["Swift", "Safari Web Extension API"],
+        features: [
+            "Automatic removal of AI-generated overviews",
+            "Lightweight and performant",
+            "One-click toggle on/off",
+            "Works seamlessly with Google Search"
+        ],
+        github: "https://github.com/Renzzo98/ByeBot",
+        links: [
+            { label: "GitHub", url: "https://github.com/Renzzo98/ByeBot" }
+        ]
+    },
+    {
+        id: 4,
+        title: "TrueUniqueLyrics",
+        subtitle: "Lyrics Deduplication Utility",
+        description: "A Python utility that allows you to look up any song and retrieve its lyrics with all duplicates removed, delivering clean, unique lyrics for any track.",
+        technologies: ["Python"],
+        github: "https://github.com/Renzzo98/TrueUniqueLyrics",
+        links: [
+            { label: "GitHub", url: "https://github.com/Renzzo98/TrueUniqueLyrics" }
+        ]
+    }
+];

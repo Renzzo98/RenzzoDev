@@ -83,7 +83,7 @@
     color: #000;
 }
 
-/* Company Badge in Timeline Cards */
+/* Company Logo in Timeline Cards */
 .card-logo-container {
     display: flex;
     justify-content: center;
@@ -91,37 +91,17 @@
     margin-bottom: 20px;
 }
 
-.company-badge {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 70px;
-    height: 70px;
-    border-radius: 12px;
-    font-weight: 700;
-    font-size: 18px;
-    color: white;
+.company-logo {
+    max-width: 120px;
+    height: auto;
+    max-height: 80px;
+    object-fit: contain;
     transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    cursor: default;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    filter: brightness(0.95);
 }
 
-.company-badge:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-}
-
-.company-badge--blackrock {
-    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
-    border: 2px solid #ff9900;
-}
-
-.company-badge--coderschool {
-    background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
-    border: 2px solid #ff9900;
-}
-
-.company-badge--hofstra {
-    background: linear-gradient(135deg, #c41e3a 0%, #a01830 100%);
-    border: 2px solid #ff9900;
+.company-logo:hover {
+    transform: scale(1.08) translateY(-4px);
+    filter: brightness(1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
