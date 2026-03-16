@@ -2,7 +2,7 @@ import './topBarNavigation.css';
 
 import { FC, useEffect, useState } from 'react';
 import { Pane } from 'evergreen-ui';
-import { navItems } from '../../constants/textContent';
+import { navItems, navIcons } from '../../constants/textContent';
 import DownloadIcon from '../../assets/downarrowcircle_down_arrow_direction_move_icon.png';
 import orangeDownloadIcon from '../../assets/orange_downarrowcircle_down_arrow_direction_move_icon.png';
 
@@ -85,7 +85,10 @@ const TopBarNavigation: FC<topBarNavigationProps> = ({ scrollFuncList })  => {
                         {navItems.map((item, index) => {
                             return (
                                 <div key={index}>
-                                    <li className='menu-item' onClick={() => handleScrollFunction(scrollFuncList[index])}>{item}</li>
+                                    <li className='menu-item' onClick={() => handleScrollFunction(scrollFuncList[index])}>
+                                        <span className='nav-icon'>{navIcons[index]}</span>
+                                        <span className='nav-text'>{item}</span>
+                                    </li>
                                 </div>
                             )
                         })}

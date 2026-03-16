@@ -47,6 +47,14 @@ export const navItems = [
     "Contact Me"
 ]
 
+export const navIcons = [
+    "🏠",
+    "👤",
+    "💼",
+    "📁",
+    "✉️"
+]
+
 export const workExperienceItems = [
     {
         title: 'NOW',
