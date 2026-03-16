@@ -16,15 +16,15 @@ const SkillSet: FC<SkillSetProps> = () => {
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.15,
-                delayChildren: 0.2,
+                staggerChildren: 0.08,
+                delayChildren: 0.1,
             },
         },
     };
 
     const itemVariants = {
         hidden: { opacity: 0, x: -30 },
-        visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+        visible: { opacity: 1, x: 0, transition: { duration: 0.3, ease: 'easeOut' } },
     };
 
     return (
@@ -39,6 +39,7 @@ const SkillSet: FC<SkillSetProps> = () => {
             <motion.div variants={itemVariants}><ScrollBar title='Angular' percentage={85} /></motion.div>
             <motion.div variants={itemVariants}><ScrollBar title='React' percentage={75} /></motion.div>
             <motion.div variants={itemVariants}><ScrollBar title='Typescript' percentage={90} /></motion.div>
+            <motion.div variants={itemVariants}><ScrollBar title='Swift' percentage={80} /></motion.div>
             <motion.div variants={itemVariants}><ScrollBar title='Java' percentage={70} /></motion.div>
             <motion.div variants={itemVariants}><ScrollBar title='Python' percentage={80} /></motion.div>
             <motion.div variants={itemVariants}><ScrollBar title='Flutter' percentage={75} /></motion.div>

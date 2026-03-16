@@ -17,7 +17,7 @@ const ModernWorkTimeline: FC<ModernWorkTimelineProps> = () => {
             className='timeline-item'
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, ease: 'easeOut' }}
+            transition={{ duration: 0.4, ease: 'easeOut' }}
             viewport={{ once: true, margin: '-50px' }}
         >
             <Chrono

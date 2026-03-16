@@ -15,14 +15,24 @@ const TopBarNavigation: FC<topBarNavigationProps> = ({ scrollFuncList })  => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isMenuRendered, setIsMenuRendered] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const [currentSection, setCurrentSection] = useState(0);
 
     const fileName = "HugoRenzzoResume.pdf";
 
     useEffect(() => {
         const handleScroll = () => {
-        const isScrolled = window.scrollY > 0;
-        if (isScrolled !== scrolled) {
+            const isScrolled = window.scrollY > 0;
+            if (isScrolled !== scrolled) {
                 setScrolled(isScrolled);
+            }
+
+            // Update current section based on scroll position
+            const sectionHeights = [100, 500, 1200, 2000, 2800];
+            for (let i = sectionHeights.length - 1; i >= 0; i--) {
+                if (window.scrollY >= sectionHeights[i]) {
+                    setCurrentSection(i);
+                    break;
+                }
             }
         };
 
@@ -78,6 +88,13 @@ const TopBarNavigation: FC<topBarNavigationProps> = ({ scrollFuncList })  => {
                     <span className={`menu-icon ${isMenuOpen ? 'hide' : 'show'}`}>☰</span>
                     <span className={`menu-icon ${isMenuOpen ? 'show' : 'hide'}`}>✕</span>
                 </div>
+                {currentSection > 0 && (
+                    <div className="breadcrumb">
+                        <span className="breadcrumb-home">Home</span>
+                        <span className="breadcrumb-separator">/</span>
+                        <span className="breadcrumb-current">{navItems[currentSection]}</span>
+                    </div>
+                )}
             </div>
             {isMenuRendered && (
                 <div className={`top-nav-menu-container ${isMenuOpen ? 'show' : 'hide'}`}>

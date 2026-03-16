@@ -16,7 +16,7 @@ const AboutMeSection: FC<AboutMeSectionProps> = ({ refPointer }) => {
         <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, margin: '-100px' }}
         >
             <Section

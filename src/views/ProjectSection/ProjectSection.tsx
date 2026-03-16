@@ -16,22 +16,22 @@ const ProjectSection: FC<ProjectSectionProps> = ({ refPointer }) => {
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.15,
-                delayChildren: 0.1,
+                staggerChildren: 0.1,
+                delayChildren: 0.08,
             },
         },
     };
 
     const itemVariants = {
         hidden: { opacity: 0, y: 40 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.35, ease: 'easeOut' } },
     };
 
     return (
         <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true, margin: '-100px' }}
         >
             <Section
