@@ -64,6 +64,21 @@
     display: none !important;
 }
 
+/* Remove all gradient overlays from cards */
+[class*="TimelineCard"]::after,
+[class*="CardContent"]::after,
+.rc-card::after,
+.rc-card-text::after {
+    display: none !important;
+    background: none !important;
+}
+
+/* Remove background gradients */
+[class*="TimelineCard"],
+[class*="CardContent"] {
+    background: transparent !important;
+}
+
 /* Remove card shadows */
 .rc-card,
 [class*="card"],
