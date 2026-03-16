@@ -51,10 +51,10 @@ const ContactSection: FC<ContactSectionProps> = ({ refPointer }) => {
                 childComponent={
                     <motion.div
                         className="contact-methods"
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, margin: isMobile ? '0px' : '-50px' }}
-                        variants={containerVariants}
+                        initial={isMobile ? "visible" : "hidden"}
+                        whileInView={isMobile ? undefined : "visible"}
+                        viewport={isMobile ? undefined : { once: true, margin: '-50px' }}
+                        variants={isMobile ? undefined : containerVariants}
                     >
                         <motion.div variants={itemVariants}>
                             <IconList vertical={false} iconArr={socialMediaIcons} />

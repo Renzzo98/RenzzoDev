@@ -31,10 +31,10 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
     return (
         <motion.div
             className={`project-card ${project.featured ? 'featured' : ''}`}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: isMobile ? 0.3 : 0.6 }}
-            viewport={{ once: true }}
+            initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
+            transition={isMobile ? undefined : { duration: 0.6 }}
+            viewport={isMobile ? undefined : { once: true }}
         >
             <div className="project-header">
                 <h3 className="project-title">{project.title}</h3>

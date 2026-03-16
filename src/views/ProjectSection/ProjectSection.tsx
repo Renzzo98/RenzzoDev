@@ -50,10 +50,10 @@ const ProjectSection: FC<ProjectSectionProps> = ({ refPointer }) => {
                     <div>
                         <motion.div
                             className="projects-grid"
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true, margin: isMobile ? '0px' : '-50px' }}
-                            variants={containerVariants}
+                            initial={isMobile ? "visible" : "hidden"}
+                            whileInView={isMobile ? undefined : "visible"}
+                            viewport={isMobile ? undefined : { once: true, margin: '-50px' }}
+                            variants={isMobile ? undefined : containerVariants}
                         >
                             {projectsItems.map((project) => (
                                 <motion.div
@@ -67,10 +67,10 @@ const ProjectSection: FC<ProjectSectionProps> = ({ refPointer }) => {
                         </motion.div>
                         <motion.div
                             className="projects-cta"
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true, margin: isMobile ? '0px' : '-50px' }}
-                            variants={buttonVariants}
+                            initial={isMobile ? "visible" : "hidden"}
+                            whileInView={isMobile ? undefined : "visible"}
+                            viewport={isMobile ? undefined : { once: true, margin: '-50px' }}
+                            variants={isMobile ? undefined : buttonVariants}
                         >
                             <Button contentText={'Download My Resume'} type={StyleTypes.Primary} />
                         </motion.div>
