@@ -1,6 +1,7 @@
 import './ModernWorkTimeline.css';
 
 import { FC } from 'react';
+import { motion } from 'framer-motion';
 import { Chrono } from "react-chrono";
 
 import { workExperienceItems } from '../../constants/textContent';
@@ -12,7 +13,13 @@ const ModernWorkTimeline: FC<ModernWorkTimelineProps> = () => {
     
 
     return (
-        <div className='timeline-item'>
+        <motion.div
+            className='timeline-item'
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            viewport={{ once: true, margin: '-50px' }}
+        >
             <Chrono
                 items={workExperienceItems}
                 theme={{
@@ -32,7 +39,7 @@ const ModernWorkTimeline: FC<ModernWorkTimelineProps> = () => {
                 disableToolbar
                 allowDynamicUpdate
             />
-        </div>
+        </motion.div>
     ) 
 }
 
