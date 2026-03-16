@@ -5,6 +5,7 @@ import { Pane } from 'evergreen-ui';
 import TitleCard from '../../views/TitleCard/TitleCard';
 import AboutMeSection from '../../views/AboutMeSection/AboutMeSection';
 import ExperienceSection from '../../views/ExperienceSection/ExperienceSection';
+import ProjectSection from '../../views/ProjectSection/ProjectSection';
 import InsightsSection from '../../views/InsightsSection/InsightsSection';
 import ContactSection from '../../views/ContactSection/ContactSection';
 import TopBarNavigation from '../../compoments/topBarNavigation/topBarNavigation';
@@ -16,6 +17,7 @@ const ModernTemplate: FC<modernTemplateProps> = () => {
     const sectionHeader = useRef<HTMLDivElement>(null);
     const sectionAbout = useRef<HTMLDivElement>(null);
     const sectionExp = useRef<HTMLDivElement>(null);
+    const sectionProjects = useRef<HTMLDivElement>(null);
     const sectionContact = useRef<HTMLDivElement>(null);
 
 
@@ -38,6 +40,12 @@ const ModernTemplate: FC<modernTemplateProps> = () => {
         }
     };
 
+    const scrollToProjectsSection = () => {
+        if (sectionProjects.current) {
+            sectionProjects.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     const scrollToContactSection = () => {
         window.scrollTo({
             top: document.body.scrollHeight,
@@ -45,7 +53,7 @@ const ModernTemplate: FC<modernTemplateProps> = () => {
         })
     };
 
-    const scrollFunctions = [scrollToHeaderSection, scrollToAboutSection, scrollToExpSection, scrollToContactSection];
+    const scrollFunctions = [scrollToHeaderSection, scrollToAboutSection, scrollToExpSection, scrollToProjectsSection, scrollToContactSection];
 
     return (
         <div>
@@ -55,6 +63,7 @@ const ModernTemplate: FC<modernTemplateProps> = () => {
                     <TitleCard refPointer={sectionHeader}/>
                     <AboutMeSection refPointer={sectionAbout}/>
                     <ExperienceSection refPointer={sectionExp} />
+                    <ProjectSection refPointer={sectionProjects} />
                 </div>
                 <InsightsSection />
                 <ContactSection refPointer={sectionContact}/>

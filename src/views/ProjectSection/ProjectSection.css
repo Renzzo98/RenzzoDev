@@ -1,0 +1,29 @@
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 40px;
+}
+
+.projects-grid .project-card.featured {
+    grid-column: span 1;
+}
+
+@media (min-width: 1024px) {
+    .projects-grid .project-card.featured {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .projects-grid .project-card.featured {
+        grid-column: span 1;
+    }
+}

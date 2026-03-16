@@ -30,7 +30,6 @@ const ModernWorkTimeline: FC<ModernWorkTimelineProps> = () => {
                 }}
                 mode="VERTICAL_ALTERNATING"
                 disableToolbar
-                enableOutlineStyles
                 allowDynamicUpdate
             />
         </div>
