@@ -35,10 +35,10 @@ const ContactSection: FC<ContactSectionProps> = ({ refPointer }) => {
 
     return (
         <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: isMobile ? 0.3 : 0.5, ease: 'easeOut' }}
-            viewport={{ once: true, margin: isMobile ? '0px' : '-100px' }}
+            initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
+            transition={isMobile ? undefined : { duration: 0.5, ease: 'easeOut' }}
+            viewport={isMobile ? undefined : { once: true, margin: '-100px' }}
         >
             <Section
                 header={conactHeader}

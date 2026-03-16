@@ -11,10 +11,22 @@
     position: relative;
     width: 100%;
     background: #000000;
-    overflow: hidden;
+    overflow: visible;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.contact-container::after {
+    content: '';
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background: #000000;
+    z-index: -1;
+    pointer-events: none;
 }
 
 .contact-content {
