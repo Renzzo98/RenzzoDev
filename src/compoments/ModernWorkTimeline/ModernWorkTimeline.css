@@ -71,6 +71,12 @@
     box-shadow: none !important;
 }
 
+/* Make card title (company name) bold */
+[class*="cardTitle"],
+.rc-card-title {
+    font-weight: 700 !important;
+}
+
 /* Style bullet lists in timeline cards */
 .timeline-item ul {
     margin: 16px 0;

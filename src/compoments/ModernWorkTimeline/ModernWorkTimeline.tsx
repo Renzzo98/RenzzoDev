@@ -25,7 +25,7 @@ const ModernWorkTimeline: FC<ModernWorkTimelineProps> = () => {
                 }}
                 fontSizes={{
                     cardText: '3rem',
-                    cardTitle: '1.2rem',
+                    cardTitle: '1.5rem',
                     title: '1rem',
                 }}
                 mode="VERTICAL_ALTERNATING"
