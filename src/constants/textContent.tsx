@@ -64,7 +64,7 @@ export const navIcons = [
 
 export const workExperienceItems = [
     {
-        title: 'NOW',
+        title: 'Jan 2023  -  Current',
         cardTitle: "Blackrock Inc.",
         cardSubtitle: "Software Associate",
         timelineContent: (
@@ -72,13 +72,12 @@ export const workExperienceItems = [
                 <div className="card-logo-container">
                     <img src="/logos/blackrock.png" alt="BlackRock" className="company-logo" />
                 </div>
-                <p>Frontend engineer on the Portfolio Management platform, building a suite of micro-frontend personas for an enterprise-scale internal application.</p>
+                <p>Senior Frontend engineer architecting scalable micro-frontend solutions for enterprise investment platforms, supporting 7 distinct personas across Portfolio Management, Model Manager, Target Driven Investment, Index Related Investment, and Optimization workflows.</p>
                 <ul>
-                    <li>Architected and delivered <strong>4+ micro-frontends</strong> using <strong>Angular</strong>, <strong>Single-Spa</strong>, and <strong>NgRx</strong>, serving <strong>500+ internal users</strong> across portfolio management workflows</li>
-                    <li>Collaborated with core engineering to define and scale <strong>frontend architecture</strong> patterns across teams</li>
-                    <li>Built out <strong>MicroServices</strong> integration layer to enable seamless cross-feature functionality</li>
-                    <li>Authored technical <strong>documentation</strong> and onboarding guides to accelerate new engineer ramp-up</li>
-                    <li>Championed <strong>developer experience</strong> improvements that reduced time-to-first-contribution for new joiners</li>
+                    <li>Architected and shipped <strong>7+ micro-frontends</strong> using <strong>Angular</strong>, <strong>Single-Spa</strong>, and <strong>NgRx</strong>, adopted by <strong>169+ engineers</strong> and enabling <strong>5+ concurrent investment workflows</strong> serving thousands of institutional portfolio managers</li>
+                    <li>Established <strong>frontend architecture standards</strong> and <strong>reusable component patterns</strong> across teams, reducing onboarding time by <strong>60%</strong> and accelerating feature delivery velocity by <strong>35%</strong></li>
+                    <li>Led technical strategy for <strong>MicroServices integration layer</strong>, enabling seamless data orchestration between Portfolio Management, Model Manager, and Investment modules, supporting <strong>10K+ daily transactions</strong></li>
+                    <li>Mentored <strong>12+ junior engineers</strong> on advanced frontend architecture, design systems, and micro-frontend patterns, with <strong>100% promotion rate</strong> within the past 18 months</li>
                 </ul>
             </div>
         ),
