@@ -44,7 +44,7 @@ const ContactSection: FC<ContactSectionProps> = ({ refPointer }) => {
                 header={conactHeader}
                 desc={contactDesc}
                 refPointer={refPointer}
-                topSpacing={isMobile ? 150 : 100}
+                topSpacing={isMobile ? 120 : 100}
                 botSpacing={isMobile ? 300 : 100}
                 altBackground={true}
                 divider={false}
