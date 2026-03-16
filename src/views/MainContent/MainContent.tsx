@@ -2,7 +2,6 @@ import './MainContent.css'; // Import corresponding CSS
 
 import { FC } from 'react';
 import { Pane } from 'evergreen-ui';
-import Insights from '../../compoments/Insights/Insights';
 import ServiceCardList from '../../compoments/ServiceCardList/ServiceCardList';
 import { development, design } from '../../constants/serviceItems'; 
 import { aboutMeDesc, aboutMeHeader, servicesHeader } from '../../constants/textContent';
@@ -22,7 +21,6 @@ const MainContent: FC<mainContentProps> = ({ isMobile }) => {
       flexDirection="column"
     >
       <p className='about-me-header'>{aboutMeHeader}</p>
-      <Insights isMobile={isMobile} />
       <p className='desc-paragraph'>
         {aboutMeDesc}
       </p>

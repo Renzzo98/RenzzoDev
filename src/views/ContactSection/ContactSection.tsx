@@ -31,6 +31,7 @@ const ContactSection: FC<ContactSectionProps> = ({ refPointer }) => {
             <motion.div
                 initial={{ x: "100%" }}
                 animate={{ x: "calc(100vw - 50%)" }}
+                transition={{ duration: 1, ease: "easeInOut" }}
             />
         </div>
         
