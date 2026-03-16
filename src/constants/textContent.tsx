@@ -19,7 +19,7 @@ const getAge = () => {
 };
 
 export const aboutMeHeader = "About Me";
-export const aboutMeDesc = `I am Hugo Renzzo Olcese, ${getAge()} years old, a dedicated and skilled software engineer with a master's degree in the field. My advanced education has provided me with a deep understanding of software engineering principles and a robust skill set. This combination of theoretical knowledge and practical experience enables me to effectively tackle complex technical challenges. My expertise extends beyond coding and development; I am also well-versed in software architecture and project management. As a professional in the dynamic world of technology, I am committed to continuous learning and applying innovative solutions to advance the field.`
+export const aboutMeDesc = `I'm a product-focused engineer obsessed with building beautiful, performant UI experiences that users love. With deep expertise in Angular and micro-frontend architecture, I thrive solving complex UX problems—whether that's architecting scalable design systems, shipping iOS apps for everyday problems, or tweaking performance down to the millisecond. I've worn multiple hats (engineer, product manager, UX designer) at BlackRock, which has shaped how I think: every pixel matters, but so does the system behind it. I mentor engineers and lead design-driven initiatives, believing great UI is the intersection of technical excellence and human-centered design. Looking for lead UI roles where I can build experiences that are both beautifully designed and technically sound.`
 export const servicesHeader = "Services";
 export const expHeader = "Experience";
 export const conactHeader = "Contact Me"
@@ -51,14 +51,11 @@ export const workExperienceItems = [
         title: 'NOW',
         cardTitle: "Blackrock Inc.",
         cardSubtitle: "Software Associate",
-        cardMedia: {
-            type: 'IMAGE',
-            media: {
-                src: 'https://logo.clearbit.com/blackrock.com',
-            },
-        },
         timelineContent: (
             <div>
+                <div className="card-logo-container">
+                    <img src="https://logo.clearbit.com/blackrock.com?size=80" alt="BlackRock" className="card-company-logo" />
+                </div>
                 <p>Frontend engineer on the Portfolio Management platform, building a suite of micro-frontend personas for an enterprise-scale internal application.</p>
                 <ul>
                     <li>Architected and delivered <strong>4+ micro-frontends</strong> using <strong>Angular</strong>, <strong>Single-Spa</strong>, and <strong>NgRx</strong>, serving <strong>500+ internal users</strong> across portfolio management workflows</li>
@@ -74,14 +71,11 @@ export const workExperienceItems = [
         title: 'Aug 2020  -  Dec 2022',
         cardTitle: "Blackrock Inc.",
         cardSubtitle: "Software Analyst",
-        cardMedia: {
-            type: 'IMAGE',
-            media: {
-                src: 'https://logo.clearbit.com/blackrock.com',
-            },
-        },
         timelineContent: (
             <div>
+                <div className="card-logo-container">
+                    <img src="https://logo.clearbit.com/blackrock.com?size=80" alt="BlackRock" className="card-company-logo" />
+                </div>
                 <p>Full rotation across engineering, product management, and UX design within the Portfolio Management division.</p>
                 <ul>
                     <li>Engineered a <strong>data visualization component</strong> adopted by <strong>50+ engineers</strong> across the design system, reducing chart implementation time by <strong>40%</strong></li>
@@ -97,14 +91,11 @@ export const workExperienceItems = [
         title: 'Mar 2019  -  Aug 2019',
         cardTitle: "Blackrock Inc.",
         cardSubtitle: "Summer Intern",
-        cardMedia: {
-            type: 'IMAGE',
-            media: {
-                src: 'https://logo.clearbit.com/blackrock.com',
-            },
-        },
         timelineContent: (
             <div>
+                <div className="card-logo-container">
+                    <img src="https://logo.clearbit.com/blackrock.com?size=80" alt="BlackRock" className="card-company-logo" />
+                </div>
                 <p>Built client-facing frontend features for BlackRock's reporting software.</p>
                 <ul>
                     <li>Developed <strong>6 Angular 5</strong> frontend screens for client-reporting software using <strong>ag-grid</strong> and <strong>Angular Material</strong>, used by <strong>200+ institutional clients</strong></li>
@@ -118,14 +109,11 @@ export const workExperienceItems = [
         title: 'Aug 2018  -  Apr 2019',
         cardTitle: "The Coder School",
         cardSubTitle: "Coder Coach",
-        cardMedia: {
-            type: 'IMAGE',
-            media: {
-                src: 'https://logo.clearbit.com/thecoderschool.com',
-            },
-        },
         timelineContent: (
             <div>
+                <div className="card-logo-container">
+                    <img src="https://logo.clearbit.com/thecoderschool.com?size=80" alt="The Coder School" className="card-company-logo" />
+                </div>
                 <p>Introduced students of all ages to programming fundamentals in a 1-on-1 coaching environment.</p>
                 <ul>
                     <li>Taught <strong>Python</strong>, <strong>Java</strong>, and <strong>Scratch</strong> to <strong>75+ students</strong> across elementary through high school, maintaining <strong>90% student retention</strong> and progressing <strong>12 students to AP Computer Science</strong></li>
@@ -138,14 +126,11 @@ export const workExperienceItems = [
         title: 'Jun 2017  -  Aug 2017',
         cardTitle: "Hofstra University",
         cardSubtitle: "Lead Research",
-        cardMedia: {
-            type: 'IMAGE',
-            media: {
-                src: 'https://logo.clearbit.com/hofstra.edu',
-            },
-        },
         timelineContent: (
             <div>
+                <div className="card-logo-container">
+                    <img src="https://logo.clearbit.com/hofstra.edu?size=80" alt="Hofstra University" className="card-company-logo" />
+                </div>
                 <p>Led a team researching next-generation intrusion detection systems using low-level CPU instrumentation.</p>
                 <ul>
                     <li>Led a team of <strong>5 student researchers</strong> building a CPU-level <strong>intrusion detection system</strong> using <strong>Intel PT</strong></li>
@@ -158,4 +143,4 @@ export const workExperienceItems = [
     },
 ];
 
-export const contactDesc = 'Always looking for new opportunities!'
+export const contactDesc = 'Open to lead UI roles focused on design systems, mobile experiences, and complex UX problems across web and iOS. Looking for companies serious about design excellence.'

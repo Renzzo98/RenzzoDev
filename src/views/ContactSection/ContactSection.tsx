@@ -12,7 +12,7 @@ interface ContactSectionProps {
 }
 
 const ContactSection: FC<ContactSectionProps> = ({ refPointer }) => {
-    
+
     const socialMediaIcons = [gitHubWhite, linkedInWhite];
 
     return (
@@ -26,9 +26,17 @@ const ContactSection: FC<ContactSectionProps> = ({ refPointer }) => {
                 botSpacing={100}
                 altBackground={true}
                 divider={false}
-                childComponent={<IconList vertical={false} iconArr={socialMediaIcons} />}
+                childComponent={
+                    <div className="contact-methods">
+                        <IconList vertical={false} iconArr={socialMediaIcons} />
+                        <a href="mailto:renzzo098@gmail.com" className="email-button">
+                            Get in touch via email
+                        </a>
+                    </div>
+                }
             />
             <motion.div
+                className="contact-motion-divider"
                 initial={{ x: "100%" }}
                 animate={{ x: "calc(100vw - 50%)" }}
                 transition={{ duration: 1, ease: "easeInOut" }}

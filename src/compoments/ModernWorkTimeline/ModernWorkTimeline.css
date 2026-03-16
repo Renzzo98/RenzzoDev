@@ -82,3 +82,25 @@
     font-weight: 600;
     color: #000;
 }
+
+/* Company Logo in Timeline Cards */
+.card-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card-company-logo {
+    height: 60px;
+    width: auto;
+    max-width: 120px;
+    object-fit: contain;
+    opacity: 0.9;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card-company-logo:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
