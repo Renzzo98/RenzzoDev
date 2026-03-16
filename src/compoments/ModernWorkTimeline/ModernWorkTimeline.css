@@ -64,6 +64,13 @@
     display: none !important;
 }
 
+/* Remove card shadows */
+.rc-card,
+[class*="card"],
+.timeline-item > div > div > div {
+    box-shadow: none !important;
+}
+
 /* Style bullet lists in timeline cards */
 .timeline-item ul {
     margin: 16px 0;
